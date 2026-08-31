@@ -5,10 +5,10 @@
   "audio": "assets/whole-new-worlds.mp3",
   "cover": "assets/cover.jpg",
   "duration": 380.64,
-  "timestampsAreEstimated": true,
+  "timestampsAreEstimated": false,
   "lines": [
     {
-      "time": 1.2,
+      "time": 2.37,
       "section": "INTRO",
       "sectionStart": true,
       "en": "Ta-ra-ra, ta-ra-ra",
@@ -16,7 +16,7 @@
       "tag": ""
     },
     {
-      "time": 5.11,
+      "time": 3.95,
       "section": "INTRO",
       "sectionStart": false,
       "en": "Ta-ra-ra-raaa",
@@ -24,7 +24,7 @@
       "tag": ""
     },
     {
-      "time": 8.37,
+      "time": 5.52,
       "section": "INTRO",
       "sectionStart": false,
       "en": "What if we choose each other?",
@@ -32,7 +32,7 @@
       "tag": "whatif"
     },
     {
-      "time": 13.91,
+      "time": 17.82,
       "section": "INTRO",
       "sectionStart": false,
       "en": "Ta-ra-ra, ta-ra-ra",
@@ -40,7 +40,7 @@
       "tag": ""
     },
     {
-      "time": 18.15,
+      "time": 30.12,
       "section": "VERSE 1",
       "sectionStart": true,
       "en": "Tell me",
@@ -48,7 +48,7 @@
       "tag": ""
     },
     {
-      "time": 20.76,
+      "time": 33.04,
       "section": "VERSE 1",
       "sectionStart": false,
       "en": "if you believe in messages from dreams",
@@ -56,7 +56,7 @@
       "tag": ""
     },
     {
-      "time": 25.65,
+      "time": 37.92,
       "section": "VERSE 1",
       "sectionStart": false,
       "en": "If you believe in coincidence",
@@ -64,7 +64,7 @@
       "tag": ""
     },
     {
-      "time": 29.89,
+      "time": 41.64,
       "section": "VERSE 1",
       "sectionStart": false,
       "en": "or that everything has its time",
@@ -72,7 +72,7 @@
       "tag": ""
     },
     {
-      "time": 34.13,
+      "time": 45.12,
       "section": "VERSE 1",
       "sectionStart": false,
       "en": "What do you know",
@@ -80,7 +80,7 @@
       "tag": ""
     },
     {
-      "time": 37.06,
+      "time": 48.84,
       "section": "VERSE 1",
       "sectionStart": false,
       "en": "of the language of the stars?",
@@ -88,7 +88,7 @@
       "tag": ""
     },
     {
-      "time": 40.97,
+      "time": 53.4,
       "section": "VERSE 1",
       "sectionStart": false,
       "en": "The one they use in silence",
@@ -96,7 +96,7 @@
       "tag": ""
     },
     {
-      "time": 44.56,
+      "time": 56.31,
       "section": "VERSE 1",
       "sectionStart": false,
       "en": "with which they've told a thousand stories",
@@ -104,7 +104,7 @@
       "tag": ""
     },
     {
-      "time": 49.13,
+      "time": 59.21,
       "section": "VERSE 1",
       "sectionStart": false,
       "en": "through the ages",
@@ -112,7 +112,7 @@
       "tag": ""
     },
     {
-      "time": 52.06,
+      "time": 62.12,
       "section": "VERSE 1",
       "sectionStart": false,
       "en": "Does chance decide our destiny",
@@ -120,7 +120,7 @@
       "tag": ""
     },
     {
-      "time": 56.3,
+      "time": 65.96,
       "section": "VERSE 1",
       "sectionStart": false,
       "en": "or do we choose it?",
@@ -128,7 +128,7 @@
       "tag": ""
     },
     {
-      "time": 59.56,
+      "time": 69.8,
       "section": "VERSE 1",
       "sectionStart": false,
       "en": "Did someone already choose the road",
@@ -136,7 +136,7 @@
       "tag": ""
     },
     {
-      "time": 63.8,
+      "time": 72.76,
       "section": "VERSE 1",
       "sectionStart": false,
       "en": "or do we build it?",
@@ -144,7 +144,7 @@
       "tag": ""
     },
     {
-      "time": 67.06,
+      "time": 76.48,
       "section": "PRE-CHORUS",
       "sectionStart": true,
       "en": "Maybe the answers",
@@ -152,7 +152,7 @@
       "tag": ""
     },
     {
-      "time": 69.99,
+      "time": 79.92,
       "section": "PRE-CHORUS",
       "sectionStart": false,
       "en": "aren't meant to be found",
@@ -160,7 +160,7 @@
       "tag": ""
     },
     {
-      "time": 73.9,
+      "time": 84.24,
       "section": "PRE-CHORUS",
       "sectionStart": false,
       "en": "Maybe it's choosing",
@@ -168,7 +168,7 @@
       "tag": ""
     },
     {
-      "time": 76.84,
+      "time": 87.32,
       "section": "PRE-CHORUS",
       "sectionStart": false,
       "en": "who to invent them with",
@@ -176,7 +176,7 @@
       "tag": ""
     },
     {
-      "time": 80.42,
+      "time": 91.12,
       "section": "PRE-CHORUS",
       "sectionStart": false,
       "en": "Why be spectators",
@@ -184,7 +184,7 @@
       "tag": ""
     },
     {
-      "time": 83.36,
+      "time": 94.92,
       "section": "PRE-CHORUS",
       "sectionStart": false,
       "en": "if we can be actors?",
@@ -192,7 +192,7 @@
       "tag": ""
     },
     {
-      "time": 86.29,
+      "time": 99.76,
       "section": "PRE-CHORUS",
       "sectionStart": false,
       "en": "Choose to watch life passing by",
@@ -200,7 +200,7 @@
       "tag": ""
     },
     {
-      "time": 90.2,
+      "time": 102.67,
       "section": "PRE-CHORUS",
       "sectionStart": false,
       "en": "or take your hand",
@@ -208,7 +208,7 @@
       "tag": ""
     },
     {
-      "time": 93.14,
+      "time": 105.57,
       "section": "PRE-CHORUS",
       "sectionStart": false,
       "en": "and change the perspective",
@@ -216,7 +216,7 @@
       "tag": ""
     },
     {
-      "time": 97.05,
+      "time": 108.48,
       "section": "CHORUS",
       "sectionStart": true,
       "en": "WHAT IF WE CHOOSE EACH OTHER?",
@@ -224,7 +224,7 @@
       "tag": "whatif"
     },
     {
-      "time": 102.27,
+      "time": 112.6,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "We choose each other",
@@ -232,7 +232,7 @@
       "tag": ""
     },
     {
-      "time": 105.53,
+      "time": 116.4,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "We invent a brand-new destiny",
@@ -240,7 +240,7 @@
       "tag": ""
     },
     {
-      "time": 109.77,
+      "time": 120.2,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "WHOLE NEW WORLDS",
@@ -248,7 +248,7 @@
       "tag": "worlds"
     },
     {
-      "time": 114.66,
+      "time": 124.0,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "We are the architects",
@@ -256,7 +256,7 @@
       "tag": ""
     },
     {
-      "time": 118.24,
+      "time": 128.16,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "of a brand-new road",
@@ -264,7 +264,7 @@
       "tag": ""
     },
     {
-      "time": 121.83,
+      "time": 131.76,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "WHAT IF WE CHOOSE EACH OTHER?",
@@ -272,7 +272,7 @@
       "tag": "whatif"
     },
     {
-      "time": 127.05,
+      "time": 135.84,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "We choose each other",
@@ -280,7 +280,7 @@
       "tag": ""
     },
     {
-      "time": 130.63,
+      "time": 139.99,
       "section": "POST-CHORUS",
       "sectionStart": true,
       "en": "Ta-ra-ra, ta-ra-ra",
@@ -288,7 +288,7 @@
       "tag": ""
     },
     {
-      "time": 134.54,
+      "time": 144.14,
       "section": "POST-CHORUS",
       "sectionStart": false,
       "en": "Ta-ra-ra-raaa",
@@ -296,7 +296,7 @@
       "tag": ""
     },
     {
-      "time": 137.8,
+      "time": 148.29,
       "section": "POST-CHORUS",
       "sectionStart": false,
       "en": "Ta-ra-ra, ta-ra-ra",
@@ -304,7 +304,7 @@
       "tag": ""
     },
     {
-      "time": 141.72,
+      "time": 152.44,
       "section": "POST-CHORUS",
       "sectionStart": false,
       "en": "We choose each other",
@@ -312,7 +312,7 @@
       "tag": ""
     },
     {
-      "time": 145.3,
+      "time": 155.68,
       "section": "VERSE 2",
       "sectionStart": true,
       "en": "Talk to me",
@@ -320,7 +320,7 @@
       "tag": ""
     },
     {
-      "time": 147.91,
+      "time": 158.92,
       "section": "VERSE 2",
       "sectionStart": false,
       "en": "about the language of dreams",
@@ -328,7 +328,7 @@
       "tag": ""
     },
     {
-      "time": 151.82,
+      "time": 165.16,
       "section": "VERSE 2",
       "sectionStart": false,
       "en": "And building whole new worlds",
@@ -336,7 +336,7 @@
       "tag": "worlds-soft"
     },
     {
-      "time": 156.39,
+      "time": 171.4,
       "section": "VERSE 2",
       "sectionStart": false,
       "en": "What if we create new cities?",
@@ -344,7 +344,7 @@
       "tag": ""
     },
     {
-      "time": 160.63,
+      "time": 175.28,
       "section": "VERSE 2",
       "sectionStart": false,
       "en": "What if we travel through time?",
@@ -352,7 +352,7 @@
       "tag": ""
     },
     {
-      "time": 164.86,
+      "time": 179.12,
       "section": "VERSE 2",
       "sectionStart": false,
       "en": "Travel through other realities",
@@ -360,7 +360,7 @@
       "tag": ""
     },
     {
-      "time": 168.78,
+      "time": 182.64,
       "section": "VERSE 2",
       "sectionStart": false,
       "en": "and build our own empire",
@@ -368,7 +368,7 @@
       "tag": ""
     },
     {
-      "time": 173.01,
+      "time": 186.96,
       "section": "VERSE 2",
       "sectionStart": false,
       "en": "If you go to Mars",
@@ -376,7 +376,7 @@
       "tag": "mars"
     },
     {
-      "time": 176.93,
+      "time": 191.24,
       "section": "VERSE 2",
       "sectionStart": false,
       "en": "I'll stay home and walk the dog",
@@ -384,7 +384,7 @@
       "tag": "mars"
     },
     {
-      "time": 181.82,
+      "time": 193.68,
       "section": "CHORUS",
       "sectionStart": true,
       "en": "WHAT IF WE CHOOSE EACH OTHER?",
@@ -392,7 +392,7 @@
       "tag": "whatif"
     },
     {
-      "time": 187.03,
+      "time": 197.76,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "We choose each other",
@@ -400,7 +400,7 @@
       "tag": ""
     },
     {
-      "time": 190.29,
+      "time": 201.57,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "We invent a brand-new destiny",
@@ -408,7 +408,7 @@
       "tag": ""
     },
     {
-      "time": 194.53,
+      "time": 205.39,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "WHOLE NEW WORLDS",
@@ -416,7 +416,7 @@
       "tag": "worlds"
     },
     {
-      "time": 199.42,
+      "time": 209.2,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "We are the architects",
@@ -424,7 +424,7 @@
       "tag": ""
     },
     {
-      "time": 203.01,
+      "time": 213.36,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "of a brand-new road",
@@ -432,7 +432,7 @@
       "tag": ""
     },
     {
-      "time": 206.6,
+      "time": 216.96,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "WHAT IF WE CHOOSE EACH OTHER?",
@@ -440,7 +440,7 @@
       "tag": "whatif"
     },
     {
-      "time": 211.81,
+      "time": 221.04,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "We choose each other",
@@ -448,7 +448,7 @@
       "tag": ""
     },
     {
-      "time": 215.07,
+      "time": 224.93,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "You imagine it",
@@ -456,7 +456,7 @@
       "tag": "imagine"
     },
     {
-      "time": 218.66,
+      "time": 228.82,
       "section": "CHORUS",
       "sectionStart": false,
       "en": "and I will build it",
@@ -464,7 +464,7 @@
       "tag": "imagine"
     },
     {
-      "time": 222.24,
+      "time": 232.71,
       "section": "POST-CHORUS",
       "sectionStart": true,
       "en": "You imagine it",
@@ -472,7 +472,7 @@
       "tag": "imagine"
     },
     {
-      "time": 225.5,
+      "time": 236.6,
       "section": "POST-CHORUS",
       "sectionStart": false,
       "en": "I will build it",
@@ -480,7 +480,7 @@
       "tag": "imagine"
     },
     {
-      "time": 228.44,
+      "time": 238.71,
       "section": "POST-CHORUS",
       "sectionStart": false,
       "en": "You imagine it",
@@ -488,7 +488,7 @@
       "tag": "imagine"
     },
     {
-      "time": 231.7,
+      "time": 240.82,
       "section": "POST-CHORUS",
       "sectionStart": false,
       "en": "I will build it",
@@ -496,7 +496,7 @@
       "tag": "imagine"
     },
     {
-      "time": 234.63,
+      "time": 242.93,
       "section": "POST-CHORUS",
       "sectionStart": false,
       "en": "Ta-ra-ra, ta-ra-ra",
@@ -504,7 +504,7 @@
       "tag": ""
     },
     {
-      "time": 238.55,
+      "time": 245.04,
       "section": "BRIDGE",
       "sectionStart": true,
       "en": "If that world doesn't exist",
@@ -512,7 +512,7 @@
       "tag": ""
     },
     {
-      "time": 242.78,
+      "time": 248.84,
       "section": "BRIDGE",
       "sectionStart": false,
       "en": "We'll invent it together",
@@ -520,7 +520,7 @@
       "tag": "invent"
     },
     {
-      "time": 247.02,
+      "time": 252.72,
       "section": "BRIDGE",
       "sectionStart": false,
       "en": "If the story that is written",
@@ -528,7 +528,7 @@
       "tag": ""
     },
     {
-      "time": 250.93,
+      "time": 256.6,
       "section": "BRIDGE",
       "sectionStart": false,
       "en": "is ours to decide",
@@ -536,7 +536,7 @@
       "tag": ""
     },
     {
-      "time": 254.52,
+      "time": 260.48,
       "section": "BRIDGE",
       "sectionStart": false,
       "en": "And if every day",
@@ -544,7 +544,7 @@
       "tag": ""
     },
     {
-      "time": 257.78,
+      "time": 263.92,
       "section": "BRIDGE",
       "sectionStart": false,
       "en": "we discover each other again",
@@ -552,7 +552,7 @@
       "tag": ""
     },
     {
-      "time": 262.35,
+      "time": 267.66,
       "section": "BUILD",
       "sectionStart": true,
       "en": "You imagine it",
@@ -560,7 +560,7 @@
       "tag": "imagine"
     },
     {
-      "time": 265.61,
+      "time": 271.4,
       "section": "BUILD",
       "sectionStart": false,
       "en": "I will build it",
@@ -568,7 +568,7 @@
       "tag": "imagine"
     },
     {
-      "time": 268.54,
+      "time": 275.26,
       "section": "BUILD",
       "sectionStart": false,
       "en": "You imagine it",
@@ -576,7 +576,7 @@
       "tag": "imagine"
     },
     {
-      "time": 271.8,
+      "time": 279.12,
       "section": "BUILD",
       "sectionStart": false,
       "en": "I will build it",
@@ -584,7 +584,7 @@
       "tag": "imagine"
     },
     {
-      "time": 274.73,
+      "time": 282.92,
       "section": "BUILD",
       "sectionStart": false,
       "en": "You choose me",
@@ -592,7 +592,7 @@
       "tag": ""
     },
     {
-      "time": 277.67,
+      "time": 290.76,
       "section": "BUILD",
       "sectionStart": false,
       "en": "I choose you",
@@ -600,7 +600,7 @@
       "tag": ""
     },
     {
-      "time": 280.6,
+      "time": 294.48,
       "section": "BUILD",
       "sectionStart": false,
       "en": "WHAT IF WE CHOOSE EACH OTHER?",
@@ -608,7 +608,7 @@
       "tag": "whatif"
     },
     {
-      "time": 285.82,
+      "time": 298.2,
       "section": "FINAL CHORUS",
       "sectionStart": true,
       "en": "WHAT IF WE CHOOSE EACH OTHER?",
@@ -616,7 +616,7 @@
       "tag": "whatif"
     },
     {
-      "time": 291.04,
+      "time": 302.14,
       "section": "FINAL CHORUS",
       "sectionStart": false,
       "en": "WE CHOOSE EACH OTHER!",
@@ -624,7 +624,7 @@
       "tag": ""
     },
     {
-      "time": 295.27,
+      "time": 306.08,
       "section": "FINAL CHORUS",
       "sectionStart": false,
       "en": "We invent a brand-new destiny",
@@ -632,7 +632,7 @@
       "tag": ""
     },
     {
-      "time": 299.51,
+      "time": 309.88,
       "section": "FINAL CHORUS",
       "sectionStart": false,
       "en": "WHOLE NEW WORLDS",
@@ -640,7 +640,7 @@
       "tag": "worlds"
     },
     {
-      "time": 304.73,
+      "time": 313.68,
       "section": "FINAL CHORUS",
       "sectionStart": false,
       "en": "We are the architects",
@@ -648,7 +648,7 @@
       "tag": ""
     },
     {
-      "time": 308.31,
+      "time": 317.84,
       "section": "FINAL CHORUS",
       "sectionStart": false,
       "en": "of a brand-new road",
@@ -656,7 +656,7 @@
       "tag": ""
     },
     {
-      "time": 311.9,
+      "time": 321.4,
       "section": "FINAL CHORUS",
       "sectionStart": false,
       "en": "WHAT IF WE CHOOSE EACH OTHER?",
@@ -664,7 +664,7 @@
       "tag": "whatif"
     },
     {
-      "time": 317.12,
+      "time": 325.52,
       "section": "FINAL CHORUS",
       "sectionStart": false,
       "en": "WE CHOOSE EACH OTHER!",
@@ -672,7 +672,7 @@
       "tag": ""
     },
     {
-      "time": 321.36,
+      "time": 329.32,
       "section": "FINAL CHORUS",
       "sectionStart": false,
       "en": "You imagine it",
@@ -680,7 +680,7 @@
       "tag": "imagine"
     },
     {
-      "time": 324.94,
+      "time": 333.12,
       "section": "FINAL CHORUS",
       "sectionStart": false,
       "en": "and I will build it",
@@ -688,7 +688,7 @@
       "tag": "imagine"
     },
     {
-      "time": 328.85,
+      "time": 335.68,
       "section": "CLIMAX",
       "sectionStart": true,
       "en": "WHAT IF WE CHOOSE EACH OTHER?",
@@ -696,7 +696,7 @@
       "tag": "whatif"
     },
     {
-      "time": 333.74,
+      "time": 338.24,
       "section": "CLIMAX",
       "sectionStart": false,
       "en": "WHAT IF WE CHOOSE EACH OTHER?",
@@ -704,7 +704,7 @@
       "tag": "whatif"
     },
     {
-      "time": 338.63,
+      "time": 340.8,
       "section": "CLIMAX",
       "sectionStart": false,
       "en": "WHAT IF WE CHOOSE EACH OTHER?",
@@ -712,7 +712,7 @@
       "tag": "whatif"
     },
     {
-      "time": 343.53,
+      "time": 344.05,
       "section": "CLIMAX",
       "sectionStart": false,
       "en": "WE CHOOSE EACH OTHER!",
@@ -720,7 +720,7 @@
       "tag": ""
     },
     {
-      "time": 349.07,
+      "time": 347.3,
       "section": "OUTRO",
       "sectionStart": true,
       "en": "Ta-ra-ra, ta-ra-ra",
@@ -728,7 +728,7 @@
       "tag": ""
     },
     {
-      "time": 353.31,
+      "time": 350.55,
       "section": "OUTRO",
       "sectionStart": false,
       "en": "Ta-ra-ra, ta-ra-ra",
@@ -736,7 +736,7 @@
       "tag": ""
     },
     {
-      "time": 357.54,
+      "time": 353.8,
       "section": "OUTRO",
       "sectionStart": false,
       "en": "If that world doesn't exist",
@@ -744,7 +744,7 @@
       "tag": ""
     },
     {
-      "time": 362.43,
+      "time": 358.51,
       "section": "OUTRO",
       "sectionStart": false,
       "en": "We'll invent it together",
@@ -752,7 +752,7 @@
       "tag": "invent"
     },
     {
-      "time": 367.98,
+      "time": 363.21,
       "section": "OUTRO",
       "sectionStart": false,
       "en": "Ta-ra-ra",
@@ -760,7 +760,7 @@
       "tag": ""
     },
     {
-      "time": 371.89,
+      "time": 367.92,
       "section": "OUTRO",
       "sectionStart": false,
       "en": "What if we choose each other?",
