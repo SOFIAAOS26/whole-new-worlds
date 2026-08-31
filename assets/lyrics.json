@@ -1,0 +1,771 @@
+{
+  "title": "Whole New Worlds",
+  "credit": "An Original Song",
+  "tagline": "What if we choose each other?",
+  "audio": "assets/whole-new-worlds.mp3",
+  "cover": "assets/cover.jpg",
+  "duration": 380.64,
+  "timestampsAreEstimated": true,
+  "lines": [
+    {
+      "time": 1.2,
+      "section": "INTRO",
+      "sectionStart": true,
+      "en": "Ta-ra-ra, ta-ra-ra",
+      "es": "Ta-ra-ra, ta-ra-ra",
+      "tag": ""
+    },
+    {
+      "time": 5.11,
+      "section": "INTRO",
+      "sectionStart": false,
+      "en": "Ta-ra-ra-raaa",
+      "es": "Ta-ra-ra-raaa",
+      "tag": ""
+    },
+    {
+      "time": 8.37,
+      "section": "INTRO",
+      "sectionStart": false,
+      "en": "What if we choose each other?",
+      "es": "¿Y si nos elegimos?",
+      "tag": "whatif"
+    },
+    {
+      "time": 13.91,
+      "section": "INTRO",
+      "sectionStart": false,
+      "en": "Ta-ra-ra, ta-ra-ra",
+      "es": "Ta-ra-ra, ta-ra-ra",
+      "tag": ""
+    },
+    {
+      "time": 18.15,
+      "section": "VERSE 1",
+      "sectionStart": true,
+      "en": "Tell me",
+      "es": "Dime",
+      "tag": ""
+    },
+    {
+      "time": 20.76,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "if you believe in messages from dreams",
+      "es": "si crees en los mensajes de los sueños",
+      "tag": ""
+    },
+    {
+      "time": 25.65,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "If you believe in coincidence",
+      "es": "Si crees en la casualidad",
+      "tag": ""
+    },
+    {
+      "time": 29.89,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "or that everything has its time",
+      "es": "o que todo tiene su momento",
+      "tag": ""
+    },
+    {
+      "time": 34.13,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "What do you know",
+      "es": "¿Qué sabes tú",
+      "tag": ""
+    },
+    {
+      "time": 37.06,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "of the language of the stars?",
+      "es": "del lenguaje de las estrellas?",
+      "tag": ""
+    },
+    {
+      "time": 40.97,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "The one they use in silence",
+      "es": "El que usan en silencio",
+      "tag": ""
+    },
+    {
+      "time": 44.56,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "with which they've told a thousand stories",
+      "es": "con el que han contado mil historias",
+      "tag": ""
+    },
+    {
+      "time": 49.13,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "through the ages",
+      "es": "a través de los tiempos",
+      "tag": ""
+    },
+    {
+      "time": 52.06,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "Does chance decide our destiny",
+      "es": "¿El azar decide nuestro destino?",
+      "tag": ""
+    },
+    {
+      "time": 56.3,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "or do we choose it?",
+      "es": "¿o nosotros lo elegimos?",
+      "tag": ""
+    },
+    {
+      "time": 59.56,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "Did someone already choose the road",
+      "es": "¿Alguien ya eligió el camino?",
+      "tag": ""
+    },
+    {
+      "time": 63.8,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "or do we build it?",
+      "es": "¿o nosotros lo construimos?",
+      "tag": ""
+    },
+    {
+      "time": 67.06,
+      "section": "PRE-CHORUS",
+      "sectionStart": true,
+      "en": "Maybe the answers",
+      "es": "Quizá las respuestas",
+      "tag": ""
+    },
+    {
+      "time": 69.99,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "aren't meant to be found",
+      "es": "no están hechas para ser encontradas",
+      "tag": ""
+    },
+    {
+      "time": 73.9,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "Maybe it's choosing",
+      "es": "Quizá se trata de elegir",
+      "tag": ""
+    },
+    {
+      "time": 76.84,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "who to invent them with",
+      "es": "con quién inventarlas",
+      "tag": ""
+    },
+    {
+      "time": 80.42,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "Why be spectators",
+      "es": "¿Por qué ser espectadores?",
+      "tag": ""
+    },
+    {
+      "time": 83.36,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "if we can be actors?",
+      "es": "si podemos ser actores?",
+      "tag": ""
+    },
+    {
+      "time": 86.29,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "Choose to watch life passing by",
+      "es": "Elegir mirar pasar la vida",
+      "tag": ""
+    },
+    {
+      "time": 90.2,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "or take your hand",
+      "es": "o tomar tu mano",
+      "tag": ""
+    },
+    {
+      "time": 93.14,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "and change the perspective",
+      "es": "y cambiar la perspectiva",
+      "tag": ""
+    },
+    {
+      "time": 97.05,
+      "section": "CHORUS",
+      "sectionStart": true,
+      "en": "WHAT IF WE CHOOSE EACH OTHER?",
+      "es": "¿Y SI NOS ELEGIMOS?",
+      "tag": "whatif"
+    },
+    {
+      "time": 102.27,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "We choose each other",
+      "es": "Nos elegimos",
+      "tag": ""
+    },
+    {
+      "time": 105.53,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "We invent a brand-new destiny",
+      "es": "Inventamos un nuevo destino",
+      "tag": ""
+    },
+    {
+      "time": 109.77,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "WHOLE NEW WORLDS",
+      "es": "MUNDOS NUEVOS ENTEROS",
+      "tag": "worlds"
+    },
+    {
+      "time": 114.66,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "We are the architects",
+      "es": "Somos los arquitectos",
+      "tag": ""
+    },
+    {
+      "time": 118.24,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "of a brand-new road",
+      "es": "de un nuevo camino",
+      "tag": ""
+    },
+    {
+      "time": 121.83,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "WHAT IF WE CHOOSE EACH OTHER?",
+      "es": "¿Y SI NOS ELEGIMOS?",
+      "tag": "whatif"
+    },
+    {
+      "time": 127.05,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "We choose each other",
+      "es": "Nos elegimos",
+      "tag": ""
+    },
+    {
+      "time": 130.63,
+      "section": "POST-CHORUS",
+      "sectionStart": true,
+      "en": "Ta-ra-ra, ta-ra-ra",
+      "es": "Ta-ra-ra, ta-ra-ra",
+      "tag": ""
+    },
+    {
+      "time": 134.54,
+      "section": "POST-CHORUS",
+      "sectionStart": false,
+      "en": "Ta-ra-ra-raaa",
+      "es": "Ta-ra-ra-raaa",
+      "tag": ""
+    },
+    {
+      "time": 137.8,
+      "section": "POST-CHORUS",
+      "sectionStart": false,
+      "en": "Ta-ra-ra, ta-ra-ra",
+      "es": "Ta-ra-ra, ta-ra-ra",
+      "tag": ""
+    },
+    {
+      "time": 141.72,
+      "section": "POST-CHORUS",
+      "sectionStart": false,
+      "en": "We choose each other",
+      "es": "Nos elegimos",
+      "tag": ""
+    },
+    {
+      "time": 145.3,
+      "section": "VERSE 2",
+      "sectionStart": true,
+      "en": "Talk to me",
+      "es": "Háblame",
+      "tag": ""
+    },
+    {
+      "time": 147.91,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "about the language of dreams",
+      "es": "del lenguaje de los sueños",
+      "tag": ""
+    },
+    {
+      "time": 151.82,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "And building whole new worlds",
+      "es": "y de construir mundos nuevos enteros",
+      "tag": "worlds-soft"
+    },
+    {
+      "time": 156.39,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "What if we create new cities?",
+      "es": "¿Y si creamos nuevas ciudades?",
+      "tag": ""
+    },
+    {
+      "time": 160.63,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "What if we travel through time?",
+      "es": "¿Y si viajamos en el tiempo?",
+      "tag": ""
+    },
+    {
+      "time": 164.86,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "Travel through other realities",
+      "es": "Viajar por otras realidades",
+      "tag": ""
+    },
+    {
+      "time": 168.78,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "and build our own empire",
+      "es": "y construir nuestro propio imperio",
+      "tag": ""
+    },
+    {
+      "time": 173.01,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "If you go to Mars",
+      "es": "Si tú te vas a Marte",
+      "tag": "mars"
+    },
+    {
+      "time": 176.93,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "I'll stay home and walk the dog",
+      "es": "yo me quedo en casa a cuidar al perro",
+      "tag": "mars"
+    },
+    {
+      "time": 181.82,
+      "section": "CHORUS",
+      "sectionStart": true,
+      "en": "WHAT IF WE CHOOSE EACH OTHER?",
+      "es": "¿Y SI NOS ELEGIMOS?",
+      "tag": "whatif"
+    },
+    {
+      "time": 187.03,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "We choose each other",
+      "es": "Nos elegimos",
+      "tag": ""
+    },
+    {
+      "time": 190.29,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "We invent a brand-new destiny",
+      "es": "Inventamos un nuevo destino",
+      "tag": ""
+    },
+    {
+      "time": 194.53,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "WHOLE NEW WORLDS",
+      "es": "MUNDOS NUEVOS ENTEROS",
+      "tag": "worlds"
+    },
+    {
+      "time": 199.42,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "We are the architects",
+      "es": "Somos los arquitectos",
+      "tag": ""
+    },
+    {
+      "time": 203.01,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "of a brand-new road",
+      "es": "de un nuevo camino",
+      "tag": ""
+    },
+    {
+      "time": 206.6,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "WHAT IF WE CHOOSE EACH OTHER?",
+      "es": "¿Y SI NOS ELEGIMOS?",
+      "tag": "whatif"
+    },
+    {
+      "time": 211.81,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "We choose each other",
+      "es": "Nos elegimos",
+      "tag": ""
+    },
+    {
+      "time": 215.07,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "You imagine it",
+      "es": "Tú lo imaginas",
+      "tag": "imagine"
+    },
+    {
+      "time": 218.66,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "and I will build it",
+      "es": "y yo lo construyo",
+      "tag": "imagine"
+    },
+    {
+      "time": 222.24,
+      "section": "POST-CHORUS",
+      "sectionStart": true,
+      "en": "You imagine it",
+      "es": "Tú lo imaginas",
+      "tag": "imagine"
+    },
+    {
+      "time": 225.5,
+      "section": "POST-CHORUS",
+      "sectionStart": false,
+      "en": "I will build it",
+      "es": "Yo lo construyo",
+      "tag": "imagine"
+    },
+    {
+      "time": 228.44,
+      "section": "POST-CHORUS",
+      "sectionStart": false,
+      "en": "You imagine it",
+      "es": "Tú lo imaginas",
+      "tag": "imagine"
+    },
+    {
+      "time": 231.7,
+      "section": "POST-CHORUS",
+      "sectionStart": false,
+      "en": "I will build it",
+      "es": "Yo lo construyo",
+      "tag": "imagine"
+    },
+    {
+      "time": 234.63,
+      "section": "POST-CHORUS",
+      "sectionStart": false,
+      "en": "Ta-ra-ra, ta-ra-ra",
+      "es": "Ta-ra-ra, ta-ra-ra",
+      "tag": ""
+    },
+    {
+      "time": 238.55,
+      "section": "BRIDGE",
+      "sectionStart": true,
+      "en": "If that world doesn't exist",
+      "es": "Si ese mundo no existe",
+      "tag": ""
+    },
+    {
+      "time": 242.78,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "We'll invent it together",
+      "es": "Lo inventamos juntos",
+      "tag": "invent"
+    },
+    {
+      "time": 247.02,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "If the story that is written",
+      "es": "Si la historia que se escribe",
+      "tag": ""
+    },
+    {
+      "time": 250.93,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "is ours to decide",
+      "es": "nosotros la decidimos",
+      "tag": ""
+    },
+    {
+      "time": 254.52,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "And if every day",
+      "es": "Y si cada día",
+      "tag": ""
+    },
+    {
+      "time": 257.78,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "we discover each other again",
+      "es": "volvemos a descubrirnos",
+      "tag": ""
+    },
+    {
+      "time": 262.35,
+      "section": "BUILD",
+      "sectionStart": true,
+      "en": "You imagine it",
+      "es": "Tú lo imaginas",
+      "tag": "imagine"
+    },
+    {
+      "time": 265.61,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "I will build it",
+      "es": "Yo lo construyo",
+      "tag": "imagine"
+    },
+    {
+      "time": 268.54,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "You imagine it",
+      "es": "Tú lo imaginas",
+      "tag": "imagine"
+    },
+    {
+      "time": 271.8,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "I will build it",
+      "es": "Yo lo construyo",
+      "tag": "imagine"
+    },
+    {
+      "time": 274.73,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "You choose me",
+      "es": "Tú me eliges",
+      "tag": ""
+    },
+    {
+      "time": 277.67,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "I choose you",
+      "es": "Yo te elijo",
+      "tag": ""
+    },
+    {
+      "time": 280.6,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "WHAT IF WE CHOOSE EACH OTHER?",
+      "es": "¿Y SI NOS ELEGIMOS?",
+      "tag": "whatif"
+    },
+    {
+      "time": 285.82,
+      "section": "FINAL CHORUS",
+      "sectionStart": true,
+      "en": "WHAT IF WE CHOOSE EACH OTHER?",
+      "es": "¿Y SI NOS ELEGIMOS?",
+      "tag": "whatif"
+    },
+    {
+      "time": 291.04,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "WE CHOOSE EACH OTHER!",
+      "es": "¡NOS ELEGIMOS!",
+      "tag": ""
+    },
+    {
+      "time": 295.27,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "We invent a brand-new destiny",
+      "es": "Inventamos un nuevo destino",
+      "tag": ""
+    },
+    {
+      "time": 299.51,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "WHOLE NEW WORLDS",
+      "es": "MUNDOS NUEVOS ENTEROS",
+      "tag": "worlds"
+    },
+    {
+      "time": 304.73,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "We are the architects",
+      "es": "Somos los arquitectos",
+      "tag": ""
+    },
+    {
+      "time": 308.31,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "of a brand-new road",
+      "es": "de un nuevo camino",
+      "tag": ""
+    },
+    {
+      "time": 311.9,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "WHAT IF WE CHOOSE EACH OTHER?",
+      "es": "¿Y SI NOS ELEGIMOS?",
+      "tag": "whatif"
+    },
+    {
+      "time": 317.12,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "WE CHOOSE EACH OTHER!",
+      "es": "¡NOS ELEGIMOS!",
+      "tag": ""
+    },
+    {
+      "time": 321.36,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "You imagine it",
+      "es": "Tú lo imaginas",
+      "tag": "imagine"
+    },
+    {
+      "time": 324.94,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "and I will build it",
+      "es": "y yo lo construyo",
+      "tag": "imagine"
+    },
+    {
+      "time": 328.85,
+      "section": "CLIMAX",
+      "sectionStart": true,
+      "en": "WHAT IF WE CHOOSE EACH OTHER?",
+      "es": "¿Y SI NOS ELEGIMOS?",
+      "tag": "whatif"
+    },
+    {
+      "time": 333.74,
+      "section": "CLIMAX",
+      "sectionStart": false,
+      "en": "WHAT IF WE CHOOSE EACH OTHER?",
+      "es": "¿Y SI NOS ELEGIMOS?",
+      "tag": "whatif"
+    },
+    {
+      "time": 338.63,
+      "section": "CLIMAX",
+      "sectionStart": false,
+      "en": "WHAT IF WE CHOOSE EACH OTHER?",
+      "es": "¿Y SI NOS ELEGIMOS?",
+      "tag": "whatif"
+    },
+    {
+      "time": 343.53,
+      "section": "CLIMAX",
+      "sectionStart": false,
+      "en": "WE CHOOSE EACH OTHER!",
+      "es": "¡NOS ELEGIMOS!",
+      "tag": ""
+    },
+    {
+      "time": 349.07,
+      "section": "OUTRO",
+      "sectionStart": true,
+      "en": "Ta-ra-ra, ta-ra-ra",
+      "es": "Ta-ra-ra, ta-ra-ra",
+      "tag": ""
+    },
+    {
+      "time": 353.31,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "Ta-ra-ra, ta-ra-ra",
+      "es": "Ta-ra-ra, ta-ra-ra",
+      "tag": ""
+    },
+    {
+      "time": 357.54,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "If that world doesn't exist",
+      "es": "Si ese mundo no existe",
+      "tag": ""
+    },
+    {
+      "time": 362.43,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "We'll invent it together",
+      "es": "Lo inventamos juntos",
+      "tag": "invent"
+    },
+    {
+      "time": 367.98,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "Ta-ra-ra",
+      "es": "Ta-ra-ra",
+      "tag": ""
+    },
+    {
+      "time": 371.89,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "What if we choose each other?",
+      "es": "¿Y si nos elegimos?",
+      "tag": "whatif"
+    }
+  ]
+}

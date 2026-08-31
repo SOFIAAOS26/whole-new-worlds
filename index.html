@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Whole New Worlds — What if we choose each other?</title>
+
+  <meta name="description" content="Whole New Worlds — What if we choose each other?" />
+  <meta name="theme-color" content="#050505" />
+  <meta name="color-scheme" content="dark" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="music.song" />
+  <meta property="og:title" content="Whole New Worlds" />
+  <meta property="og:description" content="What if we choose each other? — An original song." />
+  <meta property="og:image" content="assets/cover.jpg" />
+  <meta property="og:image:width" content="2048" />
+  <meta property="og:image:height" content="2048" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Whole New Worlds" />
+  <meta name="twitter:description" content="What if we choose each other? — An original song." />
+  <meta name="twitter:image" content="assets/cover.jpg" />
+
+  <!-- Favicon: two stars, inline so it works from any path -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050505'/%3E%3Ccircle cx='12' cy='13' r='2.1' fill='%23eae7ff'/%3E%3Ccircle cx='21' cy='20' r='1.4' fill='%23c9b48a'/%3E%3Ccircle cx='22' cy='11' r='0.9' fill='%238ea2ff'/%3E%3C/svg%3E" />
+
+  <!-- Fonts (the page is fully functional if these fail to load) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-state="idle" data-lang="both">
+
+  <!-- ============ LIVING BACKGROUND ============ -->
+  <div class="sky" aria-hidden="true">
+    <canvas id="starfield"></canvas>
+    <div class="sky-glow"></div>
+    <div class="sky-grain"></div>
+    <div class="sky-wordmark"><span>WHOLE</span><span>NEW</span><span>WORLDS</span></div>
+  </div>
+
+  <!-- ============ INTRO ============ -->
+  <section id="intro" class="intro" aria-label="Introduction">
+    <div class="intro-inner">
+      <p class="intro-tagline">What if we choose each other?</p>
+      <h1 class="intro-title" aria-label="Whole New Worlds">
+        <span>Whole</span> <span>New</span> <span>Worlds</span>
+      </h1>
+      <p class="intro-credit">An original song</p>
+      <button id="introPlay" class="intro-play" type="button" aria-label="Play Whole New Worlds">
+        <span class="intro-play-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
+        </span>
+        <span class="intro-play-label">Play</span>
+      </button>
+      <p class="intro-hint">Best with sound on · headphones recommended</p>
+    </div>
+  </section>
+
+  <!-- ============ MAIN STAGE ============ -->
+  <main id="stage" class="stage" aria-hidden="true">
+
+    <!-- LEFT: cover + identity + player -->
+    <section class="panel-left" aria-label="Player">
+
+      <figure class="cover">
+        <div class="cover-glow" id="coverGlow"></div>
+        <img id="coverImg" src="assets/cover.jpg" alt="Whole New Worlds cover artwork" draggable="false" />
+        <figcaption class="cover-caption">Whole New Worlds</figcaption>
+      </figure>
+
+      <div class="identity">
+        <h2 class="identity-title">Whole New Worlds</h2>
+        <p class="identity-credit" id="identityCredit">An original song</p>
+        <p class="identity-tagline">“What if we choose each other?”</p>
+      </div>
+
+      <div class="player">
+        <!-- progress -->
+        <div class="progress-row">
+          <div class="seek" id="seek" role="slider" tabindex="0"
+               aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+               aria-valuetext="0 percent">
+            <div class="seek-track">
+              <div class="seek-buffered" id="seekBuffered"></div>
+              <div class="seek-fill" id="seekFill"></div>
+              <div class="seek-head" id="seekHead"></div>
+            </div>
+            <div class="seek-tip" id="seekTip" aria-hidden="true">0:00</div>
+          </div>
+          <div class="times">
+            <span id="timeCurrent">0:00</span>
+            <span id="timeDuration">6:20</span>
+          </div>
+        </div>
+
+        <!-- transport -->
+        <div class="transport">
+          <button class="ctl" id="btnRestart" type="button" aria-label="Restart from beginning">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6v12M9 12l9-6v12z"/></svg>
+          </button>
+          <button class="ctl" id="btnBack" type="button" aria-label="Back 10 seconds">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 8V4L5 9l6 5v-4a6 6 0 1 1-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="ctl-num">10</span>
+          </button>
+
+          <button class="ctl ctl-play" id="btnPlay" type="button" aria-label="Play" aria-pressed="false">
+            <span class="play-bg"></span>
+            <svg class="ic-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+            <svg class="ic-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="5.5" width="3.4" height="13" rx="1"/><rect x="13.6" y="5.5" width="3.4" height="13" rx="1"/></svg>
+          </button>
+
+          <button class="ctl" id="btnFwd" type="button" aria-label="Forward 10 seconds">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 8V4l6 5-6 5v-4a6 6 0 1 0 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="ctl-num">10</span>
+          </button>
+          <button class="ctl" id="btnVol" type="button" aria-label="Mute" aria-pressed="false">
+            <svg class="ic-vol" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 0 1 0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <svg class="ic-mute" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+
+        <!-- secondary row: volume + lyrics lang + share -->
+        <div class="subrow">
+          <div class="vol" >
+            <input id="volume" type="range" min="0" max="1" step="0.01" value="0.85"
+                   aria-label="Volume" />
+          </div>
+
+          <div class="lang" role="group" aria-label="Lyrics language">
+            <button class="lang-btn" data-lang="both" type="button" aria-pressed="true">EN·ES</button>
+            <button class="lang-btn" data-lang="en" type="button" aria-pressed="false">EN</button>
+            <button class="lang-btn" data-lang="es" type="button" aria-pressed="false">ES</button>
+          </div>
+
+          <button class="ctl ctl-ghost" id="btnShare" type="button" aria-label="Share">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M8 8l4-4 4 4M6 13v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT: lyrics -->
+    <section class="panel-right" aria-label="Lyrics">
+      <div class="lyrics-shell">
+        <div class="lyrics-fade lyrics-fade-top" aria-hidden="true"></div>
+        <div class="section-flag" id="sectionFlag" aria-hidden="true"></div>
+        <div class="lyrics-scroll" id="lyricsScroll" tabindex="0" aria-label="Lyrics — click a line to jump">
+          <div class="lyrics-list" id="lyricsList" aria-live="off"></div>
+        </div>
+        <div class="lyrics-fade lyrics-fade-bottom" aria-hidden="true"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ ENDING ============ -->
+  <section id="ending" class="ending" aria-hidden="true">
+    <div class="ending-inner">
+      <p class="ending-line ending-1">If that world doesn't exist</p>
+      <p class="ending-line ending-2">We'll invent it together.</p>
+      <h2 class="ending-mark" aria-label="Whole New Worlds">
+        <span>WHOLE</span><span>NEW</span><span>WORLDS</span>
+      </h2>
+      <button id="btnAgain" class="intro-play ending-again" type="button" aria-label="Play again">
+        <span class="intro-play-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 5V2L8 6l4 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg>
+        </span>
+        <span class="intro-play-label">Play again</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- audio -->
+  <audio id="audio" src="assets/whole-new-worlds.mp3" preload="metadata"></audio>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
