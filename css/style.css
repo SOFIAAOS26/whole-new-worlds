@@ -996,3 +996,16 @@ body[data-state="ending"] .stage.is-live {
 .ending-line { text-shadow: 0 2px 34px rgba(0,0,0,0.92), 0 0 14px rgba(0,0,0,0.8); }
 .ending-mark { filter: drop-shadow(0 3px 26px rgba(0,0,0,0.85)); }
 .ending-sky-note { text-shadow: 0 1px 14px rgba(0,0,0,0.9); }
+
+/* two dates, together, each tinted like its sky */
+.ending-sky-note {
+  display: flex;
+  gap: 1.1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.sky-date { letter-spacing: 0.42em; }
+.sky-cool { color: #cdd6ff; }         /* 18 · V · 1995 */
+.sky-warm { color: #e8c88a; }         /* 9 · IV · 1988 */
+.sky-sep { color: var(--text-faint); letter-spacing: 0; }

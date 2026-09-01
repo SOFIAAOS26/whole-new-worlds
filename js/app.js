@@ -482,53 +482,41 @@
     }
   }
 
-  // The hidden finale: the real sky of each meaningful night. Load them all;
-  // they alternate across endings.
+  // The hidden finale: the real sky of each meaningful night. Load them all —
+  // they appear together, woven into one sky, each gently tinted.
   async function loadRealSkies() {
     state.skies = {};
-    await Promise.all(FINALE_SKIES.map(async (cfg) => {
+    await Promise.all(FINALE_SKIES.map(async (cfg, i) => {
       try {
         const res = await fetch(cfg.file, { cache: "no-cache" });
-        if (res.ok) state.skies[cfg.file] = (await res.json()).stars || null;
+        if (res.ok) state.skies[i] = (await res.json()).stars || null;
       } catch (e) { /* easter egg is optional — never block */ }
     }));
-    if (!state.currentSkyStars) {
-      const first = FINALE_SKIES.find((c) => state.skies[c.file]);
-      if (first) { state.currentSkyStars = state.skies[first.file]; projectRealSky(); }
-    }
+    projectRealSky();
   }
 
-  // Choose which night sky the finale shows, alternating each time.
-  function chooseFinaleSky() {
-    if (!FINALE_SKIES.length) return;
-    let idx = 0;
-    try {
-      const prev = parseInt(localStorage.getItem("wnw_sky_idx"), 10);
-      idx = (isNaN(prev) ? -1 : prev) + 1;
-    } catch { idx = (state.skyCounter = (state.skyCounter || 0) + 1); }
-    idx = ((idx % FINALE_SKIES.length) + FINALE_SKIES.length) % FINALE_SKIES.length;
-    try { localStorage.setItem("wnw_sky_idx", String(idx)); } catch {}
-    const cfg = FINALE_SKIES[idx];
-    if (state.skies && state.skies[cfg.file]) {
-      state.currentSkyStars = state.skies[cfg.file];
-      projectRealSky();
-    }
-    if (els.skyNote) els.skyNote.textContent = cfg.label;
-  }
-
+  // Project every loaded sky onto the screen together; each star keeps its tint.
   function projectRealSky() {
-    const src = state.currentSkyStars;
-    if (!src) return;
+    if (!state.skies) return;
     const R = 0.62 * Math.hypot(sky.w, sky.h);
     const cx = sky.w / 2, cy = sky.h / 2;
-    sky.realStars = src.map((s) => ({
-      sx: cx + s.x * R,
-      sy: cy - s.y * R,             // N up on screen
-      r: clamp(0.4 + s.s * 0.45, 0.4, 4.6),
-      a: s.a,
-      ph: Math.random() * 6.283,
-      hot: s.m < 1.6,
-    }));
+    const out = [];
+    FINALE_SKIES.forEach((cfg, i) => {
+      const src = state.skies[i];
+      if (!src) return;
+      for (const s of src) {
+        out.push({
+          sx: cx + s.x * R,
+          sy: cy - s.y * R,             // N up on screen
+          r: clamp(0.4 + s.s * 0.45, 0.4, 4.6),
+          a: s.a * 0.9,
+          ph: Math.random() * 6.283,
+          hot: s.m < 1.6,
+          tint: i,
+        });
+      }
+    });
+    sky.realStars = out.length ? out : null;
   }
 
   function buildStars() {
@@ -695,13 +683,15 @@
       if (sx < -30 || sx > sky.w + 30 || sy < -30 || sy > sky.h + 30) continue;
       const tw = 0.82 + Math.sin(now * 0.0016 + s.ph) * 0.18;
       const a = clamp(s.a * p * tw, 0, 1);
+      const core = s.tint === 1 ? "255,225,168" : "214,224,255";  // warm 1988 / cool 1995
+      const halo = s.tint === 1 ? "255,200,120" : "150,175,255";
       ctx.beginPath();
-      ctx.fillStyle = `rgba(242,245,255,${a})`;
+      ctx.fillStyle = `rgba(${core},${a})`;
       ctx.arc(sx, sy, s.r, 0, Math.PI * 2);
       ctx.fill();
       if (s.hot) {
         ctx.beginPath();
-        ctx.fillStyle = `rgba(150,175,255,${a * 0.2})`;
+        ctx.fillStyle = `rgba(${halo},${a * 0.22})`;
         ctx.arc(sx, sy, s.r * 3.6, 0, Math.PI * 2);
         ctx.fill();
       }
@@ -857,8 +847,7 @@
     els.ending.setAttribute("aria-hidden", "false");
     // leave lyrics where they froze for a beat; gently release energy
     state.targetEnergy = 0;
-    // the universe settles into the real sky of that night (alternating dates)
-    chooseFinaleSky();
+    // the universe settles into both real skies, woven together
     sky.target.finale = 1;
     sky.target.constellations = 0;
     sky.target.city = 0;
