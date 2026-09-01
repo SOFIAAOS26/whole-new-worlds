@@ -58,9 +58,17 @@
     cineSeek:    $("#cineSeek"),
     cineFill:    $("#cineFill"),
     cineTime:    $("#cineTime"),
+    skyNote:     $("#endingSkyNote"),
   };
 
   const CHORUS_SECTIONS = new Set(["CHORUS", "FINAL CHORUS", "CLIMAX"]);
+
+  // Finale skies — the real night sky of each meaningful date. They alternate
+  // each time you reach the ending. Add more here anytime.
+  const FINALE_SKIES = [
+    { file: "assets/sky-1995.json", label: "18 · V · 1995" },
+    { file: "assets/sky-1988.json", label: "9 · IV · 1988" },
+  ];
 
   const state = {
     lines: [],
@@ -474,22 +482,46 @@
     }
   }
 
-  // The hidden finale: the real sky of a specific night, projected to screen.
-  async function loadRealSky() {
+  // The hidden finale: the real sky of each meaningful night. Load them all;
+  // they alternate across endings.
+  async function loadRealSkies() {
+    state.skies = {};
+    await Promise.all(FINALE_SKIES.map(async (cfg) => {
+      try {
+        const res = await fetch(cfg.file, { cache: "no-cache" });
+        if (res.ok) state.skies[cfg.file] = (await res.json()).stars || null;
+      } catch (e) { /* easter egg is optional — never block */ }
+    }));
+    if (!state.currentSkyStars) {
+      const first = FINALE_SKIES.find((c) => state.skies[c.file]);
+      if (first) { state.currentSkyStars = state.skies[first.file]; projectRealSky(); }
+    }
+  }
+
+  // Choose which night sky the finale shows, alternating each time.
+  function chooseFinaleSky() {
+    if (!FINALE_SKIES.length) return;
+    let idx = 0;
     try {
-      const res = await fetch("assets/sky-1995.json", { cache: "no-cache" });
-      if (!res.ok) return;
-      const data = await res.json();
-      state.realSky = data.stars || null;
+      const prev = parseInt(localStorage.getItem("wnw_sky_idx"), 10);
+      idx = (isNaN(prev) ? -1 : prev) + 1;
+    } catch { idx = (state.skyCounter = (state.skyCounter || 0) + 1); }
+    idx = ((idx % FINALE_SKIES.length) + FINALE_SKIES.length) % FINALE_SKIES.length;
+    try { localStorage.setItem("wnw_sky_idx", String(idx)); } catch {}
+    const cfg = FINALE_SKIES[idx];
+    if (state.skies && state.skies[cfg.file]) {
+      state.currentSkyStars = state.skies[cfg.file];
       projectRealSky();
-    } catch (e) { /* easter egg is optional — never block */ }
+    }
+    if (els.skyNote) els.skyNote.textContent = cfg.label;
   }
 
   function projectRealSky() {
-    if (!state.realSky) return;
+    const src = state.currentSkyStars;
+    if (!src) return;
     const R = 0.62 * Math.hypot(sky.w, sky.h);
     const cx = sky.w / 2, cy = sky.h / 2;
-    sky.realStars = state.realSky.map((s) => ({
+    sky.realStars = src.map((s) => ({
       sx: cx + s.x * R,
       sy: cy - s.y * R,             // N up on screen
       r: clamp(0.4 + s.s * 0.45, 0.4, 4.6),
@@ -825,7 +857,8 @@
     els.ending.setAttribute("aria-hidden", "false");
     // leave lyrics where they froze for a beat; gently release energy
     state.targetEnergy = 0;
-    // the universe settles into the real sky of that night
+    // the universe settles into the real sky of that night (alternating dates)
+    chooseFinaleSky();
     sky.target.finale = 1;
     sky.target.constellations = 0;
     sky.target.city = 0;
@@ -1002,7 +1035,7 @@
     wireControls();
     await loadLyrics();
     try { initSky(); } catch (e) { console.warn("starfield disabled:", e); }
-    loadRealSky();
+    loadRealSkies();
     if (!REDUCED) requestAnimationFrame(energyLoop);
   }
 
