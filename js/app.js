@@ -50,7 +50,17 @@
     toast:       $("#toast"),
     canvas:      $("#starfield"),
     wordmark:    $(".sky-wordmark"),
+
+    btnCinema:   $("#btnCinema"),
+    cinemaBar:   $("#cinemaBar"),
+    cinePlay:    $("#cinePlay"),
+    cineExit:    $("#cineExit"),
+    cineSeek:    $("#cineSeek"),
+    cineFill:    $("#cineFill"),
+    cineTime:    $("#cineTime"),
   };
+
+  const CHORUS_SECTIONS = new Set(["CHORUS", "FINAL CHORUS", "CLIMAX"]);
 
   const state = {
     lines: [],
@@ -161,6 +171,7 @@
       node.classList.remove("is-past", "is-next");
       centerLine(node);
       updateSectionFlag(i);
+      setSceneForLine(state.lines[i]);
     }
   }
 
@@ -334,12 +345,91 @@
   }
 
   /* ----------------------------------------------------------------------
+     CINEMA MODE — only the lyrics and the cosmos, fullscreen
+     ---------------------------------------------------------------------- */
+  let idleTimer = 0;
+  function idleActivity() {
+    els.body.dataset.idle = "false";
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => {
+      if (els.body.dataset.cinema === "true") els.body.dataset.idle = "true";
+    }, 2600);
+  }
+  function startIdleWatch() {
+    document.addEventListener("mousemove", idleActivity);
+    document.addEventListener("touchstart", idleActivity, { passive: true });
+    idleActivity();
+  }
+  function stopIdleWatch() {
+    document.removeEventListener("mousemove", idleActivity);
+    document.removeEventListener("touchstart", idleActivity);
+    clearTimeout(idleTimer);
+    els.body.dataset.idle = "false";
+  }
+  function requestFS() {
+    const d = document.documentElement;
+    const fn = d.requestFullscreen || d.webkitRequestFullscreen;
+    if (fn) { try { const p = fn.call(d); if (p && p.catch) p.catch(() => {}); } catch {} }
+  }
+  function exitFS() {
+    if (document.fullscreenElement || document.webkitFullscreenElement) {
+      const fn = document.exitFullscreen || document.webkitExitFullscreen;
+      if (fn) { try { const p = fn.call(document); if (p && p.catch) p.catch(() => {}); } catch {} }
+    }
+  }
+  function toggleCinema(on) {
+    const want = on === undefined ? els.body.dataset.cinema !== "true" : on;
+    els.body.dataset.cinema = String(want);
+    els.btnCinema.setAttribute("aria-pressed", String(want));
+    els.btnCinema.setAttribute("aria-label", want ? "Exit cinema mode" : "Enter cinema mode");
+    els.cinemaBar.setAttribute("aria-hidden", String(!want));
+    if (want) {
+      requestFS();
+      startIdleWatch();
+      const node = els.lyricsList.children[state.active];
+      if (node) requestAnimationFrame(() => centerLine(node));
+    } else {
+      exitFS();
+      stopIdleWatch();
+    }
+  }
+  function updateCineProgress(ratio, t) {
+    if (els.body.dataset.cinema !== "true") return;
+    els.cineFill.style.width = (ratio * 100).toFixed(2) + "%";
+    els.cineTime.textContent = fmt(t);
+  }
+
+  /* ----------------------------------------------------------------------
      BACKGROUND STARFIELD (canvas)
      ---------------------------------------------------------------------- */
   const sky = {
     ctx: null, w: 0, h: 0, dpr: 1,
     stars: [], raf: 0, running: false, boost: 0,
+    scene: { constellations: 0, city: 0, mars: 0, finale: 0 },
+    target: { constellations: 0, city: 0, mars: 0, finale: 0 },
+    buildings: [],
+    realStars: null,
   };
+
+  // A few elegant constellations that draw themselves during the choruses.
+  // Points are in a local -1..1 space; edges connect them in order.
+  const CONSTELLATIONS = [
+    { // "W" — the signature, top centre
+      cx: 0.5, cy: 0.15, s: 0.11,
+      pts: [[-1, -0.55], [-0.5, 0.6], [0, -0.25], [0.5, 0.6], [1, -0.55]],
+      edges: [[0,1],[1,2],[2,3],[3,4]],
+    },
+    { // a temple / house — architecture, "we are the architects"
+      cx: 0.19, cy: 0.26, s: 0.10,
+      pts: [[-1, 0.6], [-1, -0.2], [0, -1], [1, -0.2], [1, 0.6]],
+      edges: [[0,1],[1,2],[2,3],[3,4],[4,0]],
+    },
+    { // a heart — choosing each other
+      cx: 0.83, cy: 0.2, s: 0.09,
+      pts: [[0, 0.5], [-0.55, 0.95], [-1, 0.25], [0, -0.7], [1, 0.25], [0.55, 0.95], [0, 0.5]],
+      edges: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6]],
+    },
+  ];
 
   function initSky() {
     if (!els.canvas) return;
@@ -358,7 +448,55 @@
     els.canvas.height = Math.floor(sky.h * sky.dpr);
     sky.ctx.setTransform(sky.dpr, 0, 0, sky.dpr, 0, 0);
     buildStars();
+    buildCity();
+    projectRealSky();
     if (REDUCED) drawSky(true);
+  }
+
+  function buildCity() {
+    const n = clamp(Math.round(sky.w / 90), 8, 20);
+    const maxH = Math.min(sky.h * 0.24, 230);
+    sky.buildings = [];
+    let x = -0.02;
+    for (let i = 0; i < n; i++) {
+      const wFrac = 0.035 + Math.random() * 0.05;
+      const h = maxH * (0.34 + Math.random() * 0.66);
+      const cols = 2 + Math.floor(Math.random() * 2);
+      const rows = Math.max(2, Math.floor(h / 22));
+      const wins = [];
+      for (let r = 0; r < rows; r++)
+        for (let c = 0; c < cols; c++)
+          if (Math.random() < 0.5)
+            wins.push([(c + 0.5) / cols, (r + 0.6) / rows, Math.random() < 0.12]);
+      sky.buildings.push({ x, w: wFrac, h, order: i / n, wins });
+      x += wFrac + 0.006 + Math.random() * 0.02;
+      if (x > 1.06) break;
+    }
+  }
+
+  // The hidden finale: the real sky of a specific night, projected to screen.
+  async function loadRealSky() {
+    try {
+      const res = await fetch("assets/sky-1995.json", { cache: "no-cache" });
+      if (!res.ok) return;
+      const data = await res.json();
+      state.realSky = data.stars || null;
+      projectRealSky();
+    } catch (e) { /* easter egg is optional — never block */ }
+  }
+
+  function projectRealSky() {
+    if (!state.realSky) return;
+    const R = 0.62 * Math.hypot(sky.w, sky.h);
+    const cx = sky.w / 2, cy = sky.h / 2;
+    sky.realStars = state.realSky.map((s) => ({
+      sx: cx + s.x * R,
+      sy: cy - s.y * R,             // N up on screen
+      r: clamp(0.4 + s.s * 0.45, 0.4, 4.6),
+      a: s.a,
+      ph: Math.random() * 6.283,
+      hot: s.m < 1.6,
+    }));
   }
 
   function buildStars() {
@@ -414,7 +552,8 @@
         s.tw += s.tws * dt;
       }
       const twinkle = 0.72 + Math.sin(s.tw) * 0.28;
-      const a = clamp(s.base * twinkle * (0.6 + energy * 0.6), 0, 1);
+      const a = clamp(s.base * twinkle * (0.6 + energy * 0.6), 0, 1) * (1 - sky.scene.finale);
+      if (a <= 0.002) continue;
       ctx.beginPath();
       ctx.fillStyle = starColor(s.hue, a);
       ctx.arc(s.x, s.y, s.r * (1 + energy * 0.25), 0, Math.PI * 2);
@@ -428,10 +567,113 @@
       }
     }
 
+    // ---- scenography: the universe tells the song ----
+    const sc = sky.scene, tg = sky.target;
+    const spd = { constellations: 1.6, city: 0.85, mars: 2.2, finale: 0.5 };
+    for (const k in sc) sc[k] += (tg[k] - sc[k]) * Math.min(dt * spd[k], 1);
+    drawMars(sc.mars * (1 - sc.finale));
+    drawCity(sc.city * (1 - sc.finale));
+    drawConstellations(sc.constellations * (0.8 + energy * 0.35) * (1 - sc.finale));
+    drawRealSky(sc.finale, now);
+
     // ease boost back down
     sky.boost += (0 - sky.boost) * Math.min(dt * 0.6, 1);
 
     if (!single && sky.running) sky.raf = requestAnimationFrame(() => drawSky());
+  }
+
+  function drawCity(p) {
+    if (p <= 0.003) return;
+    const ctx = sky.ctx, baseY = sky.h + 2;
+    for (const b of sky.buildings) {
+      const rise = clamp((p - b.order * 0.35) / (1 - b.order * 0.35), 0, 1);
+      if (rise <= 0) continue;
+      const h = b.h * rise, bw = b.w * sky.w, bx = b.x * sky.w, top = baseY - h;
+      const g = ctx.createLinearGradient(0, top, 0, baseY);
+      g.addColorStop(0, `rgba(28,34,68,${0.9 * p})`);
+      g.addColorStop(1, `rgba(6,8,18,${0.96 * p})`);
+      ctx.fillStyle = g;
+      ctx.fillRect(bx, top, bw, h);
+      ctx.fillStyle = `rgba(120,150,255,${0.5 * rise * p})`;
+      ctx.fillRect(bx, top, bw, 1.2);
+      for (const w of b.wins) {
+        const wy = top + w[1] * h;
+        if (wy < top + 3) continue;
+        ctx.fillStyle = w[2]
+          ? `rgba(232,202,142,${0.72 * rise * p})`
+          : `rgba(150,180,255,${0.55 * rise * p})`;
+        ctx.fillRect(bx + w[0] * bw - 1, wy, 1.6, 1.6);
+      }
+    }
+  }
+
+  function drawConstellations(p) {
+    if (p <= 0.003) return;
+    const ctx = sky.ctx, minD = Math.min(sky.w, sky.h);
+    ctx.lineWidth = 1;
+    for (const c of CONSTELLATIONS) {
+      const ox = c.cx * sky.w, oy = c.cy * sky.h, sc = c.s * minD;
+      const P = c.pts.map(([x, y]) => [ox + x * sc, oy + y * sc]);
+      const total = c.edges.length;
+      for (let e = 0; e < total; e++) {
+        const a = clamp(p * total - e, 0, 1);
+        if (a <= 0) break;
+        const [i, j] = c.edges[e];
+        ctx.strokeStyle = `rgba(155,178,255,${0.3 * a * p})`;
+        ctx.beginPath(); ctx.moveTo(P[i][0], P[i][1]); ctx.lineTo(P[j][0], P[j][1]); ctx.stroke();
+      }
+      for (let k = 0; k < P.length; k++) {
+        const a = clamp(p * P.length - k * 0.6, 0, 1);
+        if (a <= 0) continue;
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(222,230,255,${0.9 * a * p})`;
+        ctx.arc(P[k][0], P[k][1], 1.7, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(150,175,255,${0.16 * a * p})`;
+        ctx.arc(P[k][0], P[k][1], 6, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+  }
+
+  function drawMars(p) {
+    if (p <= 0.003) return;
+    const ctx = sky.ctx;
+    const cx = sky.w * 0.74;
+    const r = Math.min(sky.w, sky.h) * 0.045;
+    const cy = sky.h * 0.9 - r * 0.4 - p * r * 1.6;   // rises from the horizon
+    let g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r * 2.6);
+    g.addColorStop(0, `rgba(222,120,72,${0.4 * p})`);
+    g.addColorStop(1, "rgba(222,120,72,0)");
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, r * 2.6, 0, Math.PI * 2); ctx.fill();
+    g = ctx.createRadialGradient(cx - r * 0.3, cy - r * 0.3, r * 0.2, cx, cy, r);
+    g.addColorStop(0, `rgba(228,150,100,${p})`);
+    g.addColorStop(0.7, `rgba(190,92,58,${p})`);
+    g.addColorStop(1, `rgba(120,50,36,${p})`);
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.fill();
+  }
+
+  // The real sky of that night, settling into place over the ending.
+  function drawRealSky(p, now) {
+    if (p <= 0.003 || !sky.realStars) return;
+    const ctx = sky.ctx, cx = sky.w / 2, cy = sky.h / 2;
+    const scale = 1.07 - 0.07 * p;   // stars glide inward into their true positions
+    for (const s of sky.realStars) {
+      const sx = cx + (s.sx - cx) * scale;
+      const sy = cy + (s.sy - cy) * scale;
+      if (sx < -30 || sx > sky.w + 30 || sy < -30 || sy > sky.h + 30) continue;
+      const tw = 0.82 + Math.sin(now * 0.0016 + s.ph) * 0.18;
+      const a = clamp(s.a * p * tw, 0, 1);
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(242,245,255,${a})`;
+      ctx.arc(sx, sy, s.r, 0, Math.PI * 2);
+      ctx.fill();
+      if (s.hot) {
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(150,175,255,${a * 0.2})`;
+        ctx.arc(sx, sy, s.r * 3.6, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
   }
 
   function startSky() {
@@ -448,6 +690,20 @@
   function boostForSection(section) {
     if (REDUCED) return;
     if (HOT_SECTIONS.has(section)) sky.boost = Math.min(1, sky.boost + 0.5);
+  }
+
+  // Decide which scene elements the current line should summon.
+  function setSceneForLine(line) {
+    if (!line || REDUCED) return;
+    const s = line.section || "", e = (line.en || "").toLowerCase(), tag = line.tag || "";
+    const t = sky.target;
+    t.constellations = CHORUS_SECTIONS.has(s) ? 1 : (s === "PRE-CHORUS" || s === "BRIDGE" ? 0.4 : 0);
+    t.mars = tag === "mars" ? 1 : 0;
+    let city = 0;
+    if (s === "BUILD" || s === "FINAL CHORUS" || s === "CLIMAX") city = 1;
+    else if (s === "VERSE 2" && /(cities|empire|realities|worlds|mars|dog|time)/.test(e)) city = 0.75;
+    else if (s === "CHORUS" && /(architect|road|worlds)/.test(e)) city = 0.6;
+    t.city = city;
   }
 
   /* ----------------------------------------------------------------------
@@ -513,6 +769,7 @@
       const t = a.currentTime;
       const ratio = dur ? t / dur : 0;
       updateSeekVisual(ratio);
+      updateCineProgress(ratio, t);
       els.timeCurrent.textContent = fmt(t);
       els.seek.setAttribute("aria-valuenow", Math.round(ratio * 100));
       els.seek.setAttribute("aria-valuetext", `${fmt(t)} of ${fmt(dur)}`);
@@ -568,6 +825,11 @@
     els.ending.setAttribute("aria-hidden", "false");
     // leave lyrics where they froze for a beat; gently release energy
     state.targetEnergy = 0;
+    // the universe settles into the real sky of that night
+    sky.target.finale = 1;
+    sky.target.constellations = 0;
+    sky.target.city = 0;
+    sky.target.mars = 0;
   }
 
   function playAgain() {
@@ -575,6 +837,7 @@
     els.ending.setAttribute("aria-hidden", "true");
     els.body.dataset.state = "playing";
     els.audio.currentTime = 0;
+    sky.target.finale = 0;
     setActive(-1);
     play();
   }
@@ -660,6 +923,10 @@
           els.audio.volume = clamp(els.audio.volume - 0.05, 0, 1);
           els.volume.value = els.audio.volume; e.preventDefault(); break;
         case "m": toggleMute(); break;
+        case "c": case "C": toggleCinema(); e.preventDefault(); break;
+        case "Escape":
+          if (els.body.dataset.cinema === "true") { toggleCinema(false); e.preventDefault(); }
+          break;
         case "l": {
           const order = ["both", "en", "es"];
           const next = order[(order.indexOf(els.body.dataset.lang) + 1) % order.length];
@@ -693,6 +960,21 @@
     $$(".lang-btn").forEach((b) =>
       b.addEventListener("click", () => setLang(b.dataset.lang)));
 
+    els.btnCinema.addEventListener("click", () => toggleCinema());
+    els.cineExit.addEventListener("click", () => toggleCinema(false));
+    els.cinePlay.addEventListener("click", togglePlay);
+    els.cineSeek.addEventListener("pointerdown", (e) => {
+      const r = els.cineSeek.getBoundingClientRect();
+      const ratio = clamp((e.clientX - r.left) / r.width, 0, 1);
+      els.audio.currentTime = ratio * (state.duration || els.audio.duration || 0);
+    });
+    document.addEventListener("fullscreenchange", () => {
+      if (!document.fullscreenElement && els.body.dataset.cinema === "true") toggleCinema(false);
+    });
+    document.addEventListener("webkitfullscreenchange", () => {
+      if (!document.webkitFullscreenElement && els.body.dataset.cinema === "true") toggleCinema(false);
+    });
+
     wireSeek();
     wireManualScroll();
     wireEasterEgg();
@@ -720,6 +1002,7 @@
     wireControls();
     await loadLyrics();
     try { initSky(); } catch (e) { console.warn("starfield disabled:", e); }
+    loadRealSky();
     if (!REDUCED) requestAnimationFrame(energyLoop);
   }
 

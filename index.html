@@ -137,6 +137,9 @@
             <button class="lang-btn" data-lang="es" type="button" aria-pressed="false">ES</button>
           </div>
 
+          <button class="ctl ctl-ghost" id="btnCinema" type="button" aria-label="Enter cinema mode" title="Cinema mode">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V5h4M20 9V5h-4M4 15v4h4M20 15v4h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
           <button class="ctl ctl-ghost" id="btnShare" type="button" aria-label="Share">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M8 8l4-4 4 4M6 13v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
@@ -171,8 +174,22 @@
         </span>
         <span class="intro-play-label">Play again</span>
       </button>
+      <p class="ending-sky-note" title="El cielo de esa noche">18 · V · 1995</p>
     </div>
   </section>
+
+  <!-- cinema mode floating controls (only visible in cinema mode) -->
+  <div id="cinemaBar" class="cinema-bar" aria-hidden="true">
+    <button class="cbtn" id="cinePlay" type="button" aria-label="Play">
+      <svg class="ic-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+      <svg class="ic-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="5.5" width="3.4" height="13" rx="1"/><rect x="13.6" y="5.5" width="3.4" height="13" rx="1"/></svg>
+    </button>
+    <div class="cine-seek" id="cineSeek"><div class="cine-fill" id="cineFill"></div></div>
+    <span class="cine-time" id="cineTime">0:00</span>
+    <button class="cbtn" id="cineExit" type="button" aria-label="Exit cinema mode">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H5v4M15 5h4v4M9 19H5v-4M15 19h4v-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
 
   <!-- toast -->
   <div id="toast" class="toast" role="status" aria-live="polite"></div>

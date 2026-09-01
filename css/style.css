@@ -876,3 +876,123 @@ body[data-lang="es"] .lyric .es {
   .intro-title span, .intro-tagline, .intro-credit, .intro-play, .intro-hint { opacity: 1; filter: none; }
   .lyric { filter: none; }
 }
+
+/* =========================================================================
+   CINEMA MODE — only the lyrics and the cosmos
+   ========================================================================= */
+body[data-cinema="true"] { overflow: hidden; }
+
+body[data-cinema="true"] .stage {
+  grid-template-columns: 1fr;
+  max-width: 1000px;
+  padding: 0 clamp(1.2rem, 5vw, 3rem);
+}
+body[data-cinema="true"] .panel-left { display: none; }
+body[data-cinema="true"] .panel-right {
+  height: 100dvh;
+  max-width: 920px;
+  margin: 0 auto;
+}
+body[data-cinema="true"] .lyrics-list { padding: 44% 0.4rem 50%; align-items: center; text-align: center; }
+body[data-cinema="true"] .lyric { text-align: center; }
+body[data-cinema="true"] .lyric .en { font-size: clamp(1.7rem, 4.4vw, 3.1rem); }
+body[data-cinema="true"] .lyric .es { font-size: clamp(0.92rem, 2.2vw, 1.5rem); }
+body[data-cinema="true"] .lyric.tag-worlds .en { font-size: clamp(2rem, 5vw, 3.6rem); }
+body[data-cinema="true"] .section-flag { left: 50%; transform: translateX(-50%); top: 20px; }
+body[data-cinema="true"] .lyrics-fade { height: 32%; }
+body[data-cinema="true"] .lyrics-fade-top { background: linear-gradient(180deg, #030304 10%, rgba(3,3,4,0) 100%); }
+body[data-cinema="true"] .lyrics-fade-bottom { background: linear-gradient(0deg, #030304 10%, rgba(3,3,4,0) 100%); }
+body[data-cinema="true"] .lyric.tag-mars.is-active::before { display: none; }
+
+/* hide cursor + bar when idle in cinema */
+body[data-cinema="true"][data-idle="true"] { cursor: none; }
+
+.cinema-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 34px;
+  transform: translate(-50%, 0);
+  z-index: 55;
+  display: none;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(10, 12, 20, 0.55);
+  backdrop-filter: blur(16px);
+  transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+}
+body[data-cinema="true"] .cinema-bar { display: flex; }
+body[data-cinema="true"][data-idle="true"] .cinema-bar {
+  opacity: 0;
+  transform: translate(-50%, 14px);
+  pointer-events: none;
+}
+.cbtn {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 40px; height: 40px;
+  border: none; background: transparent;
+  color: var(--text-soft);
+  border-radius: 50%;
+  transition: color 0.3s var(--ease), background 0.3s var(--ease);
+}
+.cbtn:hover { color: #fff; background: rgba(255,255,255,0.05); }
+.cbtn svg { width: 20px; height: 20px; fill: currentColor; }
+#cinePlay .ic-pause { position: absolute; opacity: 0; }
+#cinePlay .ic-play { opacity: 1; margin-left: 2px; }
+body[data-state="playing"] #cinePlay .ic-play { opacity: 0; }
+body[data-state="playing"] #cinePlay .ic-pause { opacity: 1; }
+.cine-seek {
+  position: relative;
+  width: clamp(120px, 26vw, 260px);
+  height: 2px;
+  background: var(--line);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.cine-fill {
+  position: absolute; left: 0; top: 0; height: 100%; width: 0;
+  background: linear-gradient(90deg, rgba(150,170,255,0.7), #eaeeff);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(111,139,255,0.7);
+}
+.cine-time {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+  min-width: 2.6rem;
+}
+
+/* the quiet signature of the night sky in the finale */
+.ending-sky-note {
+  margin-top: 2.2rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  opacity: 0;
+}
+.ending.is-shown .ending-sky-note { animation: rise 2s var(--ease) 5.6s forwards; }
+
+/* =========================================================================
+   FINALE — let the real 1995 sky show through behind the ending
+   ========================================================================= */
+/* fade the whole player away so only the cosmos + ending text remain */
+body[data-state="ending"] .stage.is-live {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.9s var(--ease);
+}
+/* lighten the ending veil to a subtle edge vignette (sky shows in the centre) */
+.ending {
+  background: radial-gradient(78% 82% at 50% 42%, rgba(3,3,7,0) 32%, rgba(2,2,5,0.6) 100%);
+  backdrop-filter: none;
+}
+/* keep the ending text legible against the stars */
+.ending-line { text-shadow: 0 2px 34px rgba(0,0,0,0.92), 0 0 14px rgba(0,0,0,0.8); }
+.ending-mark { filter: drop-shadow(0 3px 26px rgba(0,0,0,0.85)); }
+.ending-sky-note { text-shadow: 0 1px 14px rgba(0,0,0,0.9); }
