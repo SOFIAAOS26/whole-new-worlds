@@ -13,7 +13,7 @@
 
   // sections that should make the universe swell a little
   const HOT_SECTIONS = new Set(["CHORUS", "FINAL CHORUS", "CLIMAX", "BUILD"]);
-  const HUM = /^ta-ra/i;
+  const HUM = /^\s*(ta-ra|oh-oh|ooh|da-da|na-na)/i;
 
   const els = {
     body:        document.body,
@@ -59,15 +59,29 @@
     cineFill:    $("#cineFill"),
     cineTime:    $("#cineTime"),
     skyNote:     $("#endingSkyNote"),
+
+    coverImg:      $("#coverImg"),
+    coverCaption:  $(".cover-caption"),
+    identityTitle: $(".identity-title"),
+    identityTagline: $(".identity-tagline"),
+    endingMark:    $(".ending-mark"),
+
+    galaxy:      $("#galaxy"),
+    galaxyField: $("#galaxyField"),
+    galaxyClose: $("#galaxyClose"),
+    btnTravel:   $("#btnTravel"),
+    btnTravelEnd:$("#btnTravelEnd"),
+    worldSoon:   $("#worldSoon"),
+    worldSoonBack: $(".world-soon-back"),
+    warp:        $("#warp"),
   };
 
   const CHORUS_SECTIONS = new Set(["CHORUS", "FINAL CHORUS", "CLIMAX"]);
 
-  // Finale skies — the real night sky of each meaningful date. They alternate
-  // each time you reach the ending. Add more here anytime.
-  const FINALE_SKIES = [
-    { file: "assets/sky-1995.json", label: "18 · V · 1995" },
-    { file: "assets/sky-1988.json", label: "9 · IV · 1988" },
+  // Finale skies for the CURRENT world (set per world from songs.json).
+  let FINALE_SKIES = [
+    { file: "assets/sky-1995.json", label: "18 · V · 1995", tint: 0 },
+    { file: "assets/sky-1988.json", label: "9 · IV · 1988", tint: 1 },
   ];
 
   const state = {
@@ -81,6 +95,9 @@
     energy: 0,          // smoothed 0..1
     targetEnergy: 0,
     booted: false,
+    worlds: [],
+    worldById: {},
+    currentWorld: null,
   };
 
   /* ----------------------------------------------------------------------
@@ -96,9 +113,9 @@
   /* ----------------------------------------------------------------------
      LOAD LYRICS
      ---------------------------------------------------------------------- */
-  async function loadLyrics() {
+  async function loadLyrics(path = "assets/lyrics.json") {
     try {
-      const res = await fetch("assets/lyrics.json", { cache: "no-cache" });
+      const res = await fetch(path, { cache: "no-cache" });
       if (!res.ok) throw new Error(res.status);
       const data = await res.json();
       state.lines = data.lines || [];
@@ -512,7 +529,7 @@
           a: s.a * 0.9,
           ph: Math.random() * 6.283,
           hot: s.m < 1.6,
-          tint: i,
+          tint: (cfg && cfg.tint != null) ? cfg.tint : i,
         });
       }
     });
@@ -847,8 +864,9 @@
     els.ending.setAttribute("aria-hidden", "false");
     // leave lyrics where they froze for a beat; gently release energy
     state.targetEnergy = 0;
-    // the universe settles into both real skies, woven together
-    sky.target.finale = 1;
+    // the universe settles into the real sky/skies of this world, woven together
+    // (only when this world actually has dated skies; otherwise keep the cosmos)
+    sky.target.finale = (FINALE_SKIES && FINALE_SKIES.length) ? 1 : 0;
     sky.target.constellations = 0;
     sky.target.city = 0;
     sky.target.mars = 0;
@@ -947,7 +965,8 @@
         case "m": toggleMute(); break;
         case "c": case "C": toggleCinema(); e.preventDefault(); break;
         case "Escape":
-          if (els.body.dataset.cinema === "true") { toggleCinema(false); e.preventDefault(); }
+          if (els.body.dataset.galaxy === "true") { closeGalaxy(); e.preventDefault(); }
+          else if (els.body.dataset.cinema === "true") { toggleCinema(false); e.preventDefault(); }
           break;
         case "l": {
           const order = ["both", "en", "es"];
@@ -1012,6 +1031,193 @@
   }
 
   /* ----------------------------------------------------------------------
+     WORLDS & THE NEDIS 20.08 GALAXY
+     ---------------------------------------------------------------------- */
+  function renderSkyNote(skies) {
+    if (!els.skyNote) return;
+    els.skyNote.innerHTML = "";
+    (skies || []).filter((s) => s.label).forEach((s, i) => {
+      if (i > 0) {
+        const sep = document.createElement("span");
+        sep.className = "sky-sep"; sep.setAttribute("aria-hidden", "true"); sep.textContent = "·";
+        els.skyNote.appendChild(sep);
+      }
+      const d = document.createElement("span");
+      d.className = "sky-date " + (s.tint === 1 ? "sky-warm" : "sky-cool");
+      d.textContent = s.label;
+      els.skyNote.appendChild(d);
+    });
+  }
+
+  // Reconfigure the whole player for a given world (data-driven).
+  async function applyWorld(w, autoplay = false) {
+    if (!w) return;
+    state.currentWorld = w;
+
+    if (w.audio) { els.audio.src = w.audio; els.audio.load(); }
+    if (w.cover) { els.coverImg.src = w.cover; els.coverImg.alt = (w.title || "") + " cover artwork"; }
+    if (els.coverCaption) els.coverCaption.textContent = w.title || "";
+    if (els.identityTitle) els.identityTitle.textContent = w.title || "";
+    if (els.identityCredit && w.credit) els.identityCredit.textContent = w.credit;
+    if (els.identityTagline && w.tagline) els.identityTagline.textContent = "“" + w.tagline + "”";
+    document.title = (w.title || "Whole New Worlds") + (w.tagline ? " — " + w.tagline : "");
+
+    if (els.endingMark && w.title) {
+      els.endingMark.innerHTML = "";
+      w.title.split(/\s+/).forEach((word) => {
+        const s = document.createElement("span"); s.textContent = word; els.endingMark.appendChild(s);
+      });
+      els.endingMark.setAttribute("aria-label", w.title);
+    }
+    if (w.hue != null) els.body.style.setProperty("--wh", String(w.hue));
+
+    FINALE_SKIES = (w.skies && w.skies.length) ? w.skies : [];
+    renderSkyNote(FINALE_SKIES);
+
+    // reset transport + scenography
+    state.active = -1; state.duration = 0;
+    sky.target.finale = 0; sky.scene.finale = 0;
+    sky.target.constellations = 0; sky.target.city = 0; sky.target.mars = 0;
+    updateSeekVisual(0);
+    els.timeCurrent.textContent = "0:00";
+    els.ending.classList.remove("is-shown");
+    els.ending.setAttribute("aria-hidden", "true");
+    els.lyricsScroll.scrollTop = 0;
+
+    await loadLyrics(w.lyrics || "assets/lyrics.json");
+    await loadRealSkies();
+
+    try { if (location.hash.slice(1) !== w.id) history.replaceState(null, "", "#" + w.id); } catch {}
+
+    if (autoplay) { els.body.dataset.state = "playing"; play(); }
+  }
+
+  async function loadWorlds() {
+    let data = null;
+    try {
+      const r = await fetch("songs.json", { cache: "no-cache" });
+      if (r.ok) data = await r.json();
+    } catch (e) { /* fall back to a single world */ }
+
+    let worlds = data && Array.isArray(data.worlds) && data.worlds.length ? data.worlds : null;
+    if (!worlds) {
+      worlds = [{
+        id: "whole-new-worlds", title: "Whole New Worlds", credit: "An original song",
+        tagline: "What if we choose each other?", audio: "assets/whole-new-worlds.mp3",
+        cover: "assets/cover.jpg", lyrics: "assets/lyrics.json", hue: 224, kind: "system",
+        skies: [
+          { file: "assets/sky-1995.json", label: "18 · V · 1995", tint: 0 },
+          { file: "assets/sky-1988.json", label: "9 · IV · 1988", tint: 1 },
+        ],
+        galaxy: { x: 0.5, y: 0.54, size: 1.2 }, status: "ready",
+      }];
+    }
+    state.worlds = worlds;
+    state.worldById = {};
+    worlds.forEach((w) => { state.worldById[w.id] = w; });
+    buildGalaxy();
+
+    const hashId = (location.hash || "").slice(1);
+    let initial = state.worldById[hashId];
+    if (!initial || initial.status !== "ready")
+      initial = worlds.find((w) => w.status === "ready") || worlds[0];
+    await applyWorld(initial, false);
+  }
+
+  function buildGalaxy() {
+    if (!els.galaxyField) return;
+    els.galaxyField.innerHTML = "";
+    state.worlds.forEach((w) => {
+      const g = w.galaxy || { x: 0.5, y: 0.5, size: 1 };
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "world kind-" + (w.kind || "planet");
+      if (w.status !== "ready") btn.classList.add("is-coming");
+      btn.style.left = (g.x * 100) + "%";
+      btn.style.top = (g.y * 100) + "%";
+      btn.style.setProperty("--sz", String(g.size || 1));
+      btn.style.setProperty("--wh", String(w.hue != null ? w.hue : 224));
+      btn.style.setProperty("--fd", (6 + Math.random() * 3).toFixed(2) + "s");
+      btn.style.setProperty("--fdl", (-Math.random() * 4).toFixed(2) + "s");
+      btn.setAttribute("aria-label",
+        w.status === "ready" ? ("Viajar a " + w.title) : (w.title + " — próximamente"));
+
+      const inner = document.createElement("div"); inner.className = "world-inner";
+      const orb = document.createElement("div"); orb.className = "world-orb";
+      const label = document.createElement("span"); label.className = "world-label"; label.textContent = w.title;
+      inner.appendChild(orb); inner.appendChild(label);
+      if (w.status !== "ready") {
+        const sub = document.createElement("span"); sub.className = "world-sub"; sub.textContent = "Próximamente";
+        inner.appendChild(sub);
+      }
+      btn.appendChild(inner);
+      btn.addEventListener("click", () => selectWorld(w.id));
+      els.galaxyField.appendChild(btn);
+      w._el = btn;
+    });
+  }
+
+  function refreshCurrentMarker() {
+    state.worlds.forEach((w) => {
+      if (w._el) w._el.classList.toggle("is-current", state.currentWorld && w.id === state.currentWorld.id);
+    });
+  }
+
+  function openGalaxy() {
+    refreshCurrentMarker();
+    hideWorldSoon();
+    els.body.dataset.galaxy = "true";
+    els.galaxy.classList.add("is-open");
+    els.galaxy.setAttribute("aria-hidden", "false");
+  }
+  function closeGalaxy() {
+    els.body.dataset.galaxy = "false";
+    els.galaxy.classList.remove("is-open");
+    els.galaxy.setAttribute("aria-hidden", "true");
+    hideWorldSoon();
+  }
+  function showWorldSoon() {
+    els.worldSoon.classList.add("is-shown");
+    els.worldSoon.setAttribute("aria-hidden", "false");
+  }
+  function hideWorldSoon() {
+    els.worldSoon.classList.remove("is-shown");
+    els.worldSoon.setAttribute("aria-hidden", "true");
+  }
+
+  function selectWorld(id) {
+    const w = state.worldById[id];
+    if (!w) return;
+    if (w.status !== "ready") { showWorldSoon(); return; }
+    if (state.currentWorld && w.id === state.currentWorld.id) {
+      closeGalaxy(); if (els.audio.paused) play(); return;
+    }
+    travelTo(w);
+  }
+
+  function travelTo(w) {
+    if (els.warp) {
+      els.warp.style.setProperty("--wh", String(w.hue != null ? w.hue : 224));
+      els.warp.classList.remove("go"); void els.warp.offsetWidth; els.warp.classList.add("go");
+    }
+    const swap = async () => { await applyWorld(w, true); closeGalaxy(); };
+    if (REDUCED) swap(); else setTimeout(swap, 470);
+  }
+
+  function wireGalaxy() {
+    if (els.btnTravel) els.btnTravel.addEventListener("click", openGalaxy);
+    if (els.btnTravelEnd) els.btnTravelEnd.addEventListener("click", openGalaxy);
+    if (els.galaxyClose) els.galaxyClose.addEventListener("click", closeGalaxy);
+    if (els.worldSoonBack) els.worldSoonBack.addEventListener("click", hideWorldSoon);
+    if (els.warp) els.warp.addEventListener("animationend", () => els.warp.classList.remove("go"));
+    window.addEventListener("hashchange", () => {
+      const id = (location.hash || "").slice(1);
+      const w = state.worldById[id];
+      if (w && w.status === "ready" && (!state.currentWorld || w.id !== state.currentWorld.id)) applyWorld(w, false);
+    });
+  }
+
+  /* ----------------------------------------------------------------------
      BOOT
      ---------------------------------------------------------------------- */
   async function boot() {
@@ -1022,9 +1228,9 @@
     reflectVolume();
     wireAudio();
     wireControls();
-    await loadLyrics();
+    wireGalaxy();
     try { initSky(); } catch (e) { console.warn("starfield disabled:", e); }
-    loadRealSkies();
+    await loadWorlds();
     if (!REDUCED) requestAnimationFrame(energyLoop);
   }
 

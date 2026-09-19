@@ -33,6 +33,9 @@
   /* live "energy" of the piece, driven by JS (0..1) */
   --energy: 0;
 
+  /* accent hue of the current world (set by JS) */
+  --wh: 224;
+
   --maxw: 1240px;
 }
 
@@ -1009,3 +1012,251 @@ body[data-state="ending"] .stage.is-live {
 .sky-cool { color: #cdd6ff; }         /* 18 · V · 1995 */
 .sky-warm { color: #e8c88a; }         /* 9 · IV · 1988 */
 .sky-sep { color: var(--text-faint); letter-spacing: 0; }
+
+/* =========================================================================
+   NEDIS 20.08 — THE GALAXY (world selector)
+   ========================================================================= */
+/* when the galaxy is open, the player/ending/intro step aside so only the
+   living cosmos + the worlds remain */
+body[data-galaxy="true"] .stage.is-live,
+body[data-galaxy="true"] .ending.is-shown,
+body[data-galaxy="true"] .intro { opacity: 0; pointer-events: none; transition: opacity 0.7s var(--ease); }
+
+.galaxy {
+  position: fixed;
+  inset: 0;
+  z-index: 48;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.85s var(--ease), visibility 0.85s;
+  background: radial-gradient(72% 72% at 50% 46%, rgba(6,7,14,0) 30%, rgba(3,3,7,0.5) 100%);
+}
+.galaxy.is-open { opacity: 1; visibility: visible; }
+
+.galaxy-head { text-align: center; padding: clamp(2rem, 6vh, 4rem) 1rem 0; z-index: 2; }
+.galaxy-kicker {
+  margin: 0 0 0.6rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.galaxy-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+
+.galaxy-field { position: relative; flex: 1; width: 100%; }
+
+/* a world = a floating celestial body */
+.world {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.world-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  animation: floaty var(--fd, 7s) var(--ease-soft) var(--fdl, 0s) infinite;
+}
+.world-orb {
+  width: clamp(38px, calc(var(--sz, 1) * 13vmin), 230px);
+  height: clamp(38px, calc(var(--sz, 1) * 13vmin), 230px);
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(circle at 37% 32%,
+    hsl(var(--wh, 224) 92% 84%),
+    hsl(var(--wh, 224) 72% 56%) 44%,
+    hsl(var(--wh, 224) 66% 30%) 74%,
+    hsl(var(--wh, 224) 60% 12%));
+  box-shadow: 0 0 44px -6px hsl(var(--wh, 224) 80% 60% / 0.55),
+              inset -6px -9px 22px rgba(0,0,0,0.55),
+              inset 5px 6px 18px hsl(var(--wh,224) 90% 80% / 0.25);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+/* orbital ring for systems / the current world */
+.world.kind-system .world-orb::after,
+.world.is-current .world-orb::after {
+  content: "";
+  position: absolute;
+  inset: -22% -14%;
+  border-radius: 50%;
+  border: 1px solid hsl(var(--wh, 224) 80% 78% / 0.4);
+  transform: rotate(-22deg);
+}
+.world-label {
+  font-size: clamp(0.62rem, 1.5vw, 0.82rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  white-space: nowrap;
+  transition: color 0.4s var(--ease);
+}
+.world-sub {
+  font-size: 0.56rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-top: -0.5rem;
+}
+.world:hover .world-orb,
+.world:focus-visible .world-orb {
+  transform: scale(1.09);
+  box-shadow: 0 0 70px -4px hsl(var(--wh, 224) 85% 65% / 0.85),
+              inset -6px -9px 22px rgba(0,0,0,0.5),
+              inset 5px 6px 18px hsl(var(--wh,224) 90% 82% / 0.35);
+}
+.world:hover .world-label { color: #fff; }
+
+.world.is-coming .world-orb { filter: saturate(0.55) brightness(0.7); opacity: 0.72; }
+.world.is-coming .world-label { color: var(--text-dim); }
+.world.is-current .world-orb {
+  box-shadow: 0 0 66px -4px hsl(var(--wh, 224) 85% 65% / 0.8),
+              inset -6px -9px 22px rgba(0,0,0,0.5),
+              inset 5px 6px 18px hsl(var(--wh,224) 90% 82% / 0.35);
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.galaxy-close {
+  position: absolute;
+  left: clamp(1rem, 4vw, 2.4rem);
+  bottom: clamp(1.4rem, 5vh, 2.6rem);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem 0.6rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(12,14,24,0.5);
+  color: var(--text-soft);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.galaxy-close:hover { color: #fff; border-color: rgba(150,170,255,0.5); }
+.galaxy-close svg { width: 18px; height: 18px; }
+
+/* "this world doesn't exist yet" panel */
+.world-soon {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: radial-gradient(60% 60% at 50% 45%, rgba(4,4,9,0.7), rgba(2,2,5,0.92));
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.7s var(--ease), visibility 0.7s;
+}
+.world-soon.is-shown { opacity: 1; visibility: visible; }
+.world-soon-1 { margin: 0; font-family: var(--font-display); font-weight: 300; font-size: clamp(1.1rem, 3vw, 1.7rem); color: var(--text-soft); }
+.world-soon-2 { margin: 0.4rem 0 2rem; font-family: var(--font-display); font-style: italic; font-size: clamp(1.4rem, 4vw, 2.3rem); color: var(--text); }
+.world-soon-back {
+  border: 1px solid var(--line); border-radius: 999px;
+  background: rgba(255,255,255,0.02); color: var(--text-soft);
+  padding: 0.7rem 1.4rem; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+  transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.world-soon-back:hover { color: #fff; border-color: rgba(150,170,255,0.5); }
+
+/* the ending's travel button */
+.ending-travel {
+  margin-top: 1.4rem;
+  border: none;
+  background: none;
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: color 0.3s var(--ease);
+}
+.ending.is-shown .ending-travel { animation: rise 1.6s var(--ease) 4.6s forwards; }
+.ending-travel:hover { color: #fff; }
+
+/* the warp flash between worlds */
+.warp {
+  position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(210,220,255,0.95), hsl(var(--wh,224) 80% 70% / 0.4) 42%, rgba(5,5,10,0) 72%);
+}
+.warp.go { animation: warp 1s var(--ease) forwards; }
+@keyframes warp {
+  0% { opacity: 0; transform: scale(0.2); }
+  40% { opacity: 0.9; }
+  100% { opacity: 0; transform: scale(2.6); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .world-inner { animation: none; }
+  .warp.go { animation: none; }
+}
+
+/* =========================================================================
+   NEDIS emblem + NEdi (galaxy), and Singularity's special line treatments
+   ========================================================================= */
+.galaxy-emblem {
+  position: absolute;
+  top: clamp(0.9rem, 3vh, 1.8rem);
+  left: clamp(1rem, 3vw, 2rem);
+  margin: 0;
+  width: clamp(88px, 12vw, 168px);   /* corner emblem — 4× the mini size */
+  opacity: 0.85;
+  filter: drop-shadow(0 4px 18px rgba(150, 160, 255, 0.28));
+}
+.nedi {
+  position: absolute;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vh, 2rem);
+  z-index: 3;
+  height: clamp(32px, 5.6vh, 66px);   /* half size, tucked in the lower corner */
+  width: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 14px 32px rgba(0, 0, 0, 0.6));
+  opacity: 0.96;
+  animation: nediFloat 6s var(--ease-soft) infinite;
+}
+@keyframes nediFloat {
+  0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+  50% { transform: translateY(-14px) rotate(1.5deg); }
+}
+@media (max-width: 640px) {
+  .nedi { height: 40px; right: 0.6rem; bottom: 0.8rem; opacity: 0.9; }
+}
+
+/* Singularity line tags (glow follows the current world's hue --wh) */
+.lyric.tag-gravity.is-active .en {
+  color: #fff;
+  text-shadow: 0 0 30px hsl(var(--wh, 224) 82% 72% / 0.5);
+}
+.lyric.tag-singularity .en { font-family: var(--font-display); letter-spacing: 0.02em; }
+.lyric.tag-singularity.is-active .en {
+  background: linear-gradient(90deg, #eef1ff, hsl(var(--wh, 224) 80% 80%) 52%, var(--gold));
+  -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none;
+}
+.lyric.tag-reveal .en { font-family: var(--font-display); font-style: italic; }
+.lyric.tag-reveal.is-active .en { color: #fff; text-shadow: 0 0 28px hsl(var(--wh, 224) 80% 72% / 0.45); }
+.lyric.tag-queen .en { font-family: var(--font-display); font-style: italic; }
+.lyric.tag-queen.is-active .en { color: #f6efe2; text-shadow: 0 0 26px rgba(217, 184, 119, 0.5); }
+
+@media (prefers-reduced-motion: reduce) { .nedi { animation: none; } }

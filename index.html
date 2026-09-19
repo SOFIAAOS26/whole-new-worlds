@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=9" />
 </head>
 <body data-state="idle" data-lang="both">
 
@@ -137,6 +137,9 @@
             <button class="lang-btn" data-lang="es" type="button" aria-pressed="false">ES</button>
           </div>
 
+          <button class="ctl ctl-ghost" id="btnTravel" type="button" aria-label="Viajar a otro mundo" title="Viajar a otro mundo">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.3" transform="rotate(-24 12 12)"/></svg>
+          </button>
           <button class="ctl ctl-ghost" id="btnCinema" type="button" aria-label="Enter cinema mode" title="Cinema mode">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V5h4M20 9V5h-4M4 15v4h4M20 15v4h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
@@ -174,6 +177,7 @@
         </span>
         <span class="intro-play-label">Play again</span>
       </button>
+      <button id="btnTravelEnd" class="ending-travel" type="button">Viajar a otro mundo</button>
       <p class="ending-sky-note" id="endingSkyNote" title="Los cielos de esas noches">
         <span class="sky-date sky-cool">18 · V · 1995</span>
         <span class="sky-sep" aria-hidden="true">·</span>
@@ -181,6 +185,31 @@
       </p>
     </div>
   </section>
+
+  <!-- ============ NEDIS 20.08 — la galaxia (selector de mundos) ============ -->
+  <section id="galaxy" class="galaxy" aria-hidden="true" aria-label="NEDIS 20.08 — elige un mundo">
+    <div class="galaxy-head">
+      <img class="galaxy-emblem" src="assets/nedis-emblem.png?v=8" alt="NEDIS — emblema A∞N" draggable="false" />
+      <p class="galaxy-kicker">NEDIS · 20.08</p>
+      <h2 class="galaxy-title">Elige un mundo</h2>
+    </div>
+    <div class="galaxy-field" id="galaxyField"></div>
+    <img id="nedi" class="nedi" src="assets/nedi.png?v=8" alt="NEdi" draggable="false" title="NEdi" />
+    <button id="galaxyClose" class="galaxy-close" type="button" aria-label="Volver">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Volver</span>
+    </button>
+
+    <!-- panel shown when a world doesn't exist yet -->
+    <div id="worldSoon" class="world-soon" aria-hidden="true">
+      <p class="world-soon-1">Si ese mundo no existe</p>
+      <p class="world-soon-2">lo inventaremos juntos.</p>
+      <button class="world-soon-back" type="button">Volver a la galaxia</button>
+    </div>
+  </section>
+
+  <!-- warp flash used when travelling between worlds -->
+  <div id="warp" class="warp" aria-hidden="true"></div>
 
   <!-- cinema mode floating controls (only visible in cinema mode) -->
   <div id="cinemaBar" class="cinema-bar" aria-hidden="true">
@@ -201,6 +230,6 @@
   <!-- audio -->
   <audio id="audio" src="assets/whole-new-worlds.mp3" preload="metadata"></audio>
 
-  <script src="js/app.js" defer></script>
+  <script src="js/app.js?v=8" defer></script>
 </body>
 </html>

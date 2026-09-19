@@ -1,0 +1,1193 @@
+{
+  "title": "Singularity",
+  "credit": "An original song",
+  "tagline": "You and me — a singularity.",
+  "duration": 353.04,
+  "timestampsAreEstimated": false,
+  "lines": [
+    {
+      "time": 1.0,
+      "section": "INTRO",
+      "sectionStart": true,
+      "en": "Ta-ra-ra…",
+      "es": "Ta-ra-ra…",
+      "tag": ""
+    },
+    {
+      "time": 9.08,
+      "section": "INTRO",
+      "sectionStart": false,
+      "en": "Ta-ra-ra…",
+      "es": "Ta-ra-ra…",
+      "tag": ""
+    },
+    {
+      "time": 17.15,
+      "section": "INTRO",
+      "sectionStart": false,
+      "en": "Oh-oh-oh…",
+      "es": "Oh-oh-oh…",
+      "tag": ""
+    },
+    {
+      "time": 25.23,
+      "section": "VERSE 1",
+      "sectionStart": true,
+      "en": "I used to watch the stars",
+      "es": "Solía mirar las estrellas",
+      "tag": ""
+    },
+    {
+      "time": 28.23,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "alone at night,",
+      "es": "solo por las noches,",
+      "tag": ""
+    },
+    {
+      "time": 31.59,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "Wondering what they were called,",
+      "es": "preguntándome cómo se llamaban,",
+      "tag": ""
+    },
+    {
+      "time": 33.9,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "who gave them their light.",
+      "es": "quién les daba su luz.",
+      "tag": ""
+    },
+    {
+      "time": 37.71,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "On my little planet",
+      "es": "En mi pequeño planeta",
+      "tag": ""
+    },
+    {
+      "time": 39.2,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "I never found the answers,",
+      "es": "nunca encontraba las respuestas,",
+      "tag": ""
+    },
+    {
+      "time": 40.68,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "How could I understand",
+      "es": "cómo podía entender",
+      "tag": ""
+    },
+    {
+      "time": 42.87,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "why an apple falls from heaven?",
+      "es": "por qué una manzana cae del cielo?",
+      "tag": ""
+    },
+    {
+      "time": 43.89,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "I thought I was alone,",
+      "es": "Creía estar solo,",
+      "tag": ""
+    },
+    {
+      "time": 46.17,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "just floating through the blue,",
+      "es": "simplemente flotando en el azul,",
+      "tag": ""
+    },
+    {
+      "time": 46.86,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "A little world in endless space,",
+      "es": "un pequeño mundo en el espacio infinito,",
+      "tag": ""
+    },
+    {
+      "time": 48.57,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "with nothing left to lose.",
+      "es": "sin nada que perder.",
+      "tag": ""
+    },
+    {
+      "time": 51.45,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "Until our orbits crossed…",
+      "es": "Hasta que nuestras órbitas se cruzaron…",
+      "tag": ""
+    },
+    {
+      "time": 54.33,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "And I knew.",
+      "es": "Y lo entendí.",
+      "tag": "reveal"
+    },
+    {
+      "time": 59.13,
+      "section": "PRE-CHORUS",
+      "sectionStart": true,
+      "en": "Maybe I was never lonely,",
+      "es": "Quizá nunca estuve solo,",
+      "tag": ""
+    },
+    {
+      "time": 60.33,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "maybe I was only waiting,",
+      "es": "quizá sólo estaba esperando,",
+      "tag": ""
+    },
+    {
+      "time": 62.37,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "For two bodies to collide",
+      "es": "a que dos cuerpos colisionaran",
+      "tag": ""
+    },
+    {
+      "time": 63.72,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "at exactly the right time.",
+      "es": "exactamente en el momento indicado.",
+      "tag": ""
+    },
+    {
+      "time": 64.56,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "An invisible force,",
+      "es": "Una fuerza invisible,",
+      "tag": ""
+    },
+    {
+      "time": 65.41,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "something I can't explain…",
+      "es": "algo que no puedo explicar…",
+      "tag": ""
+    },
+    {
+      "time": 68.67,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "Your gravity pulls me in,",
+      "es": "Tu gravedad me atrae,",
+      "tag": "gravity"
+    },
+    {
+      "time": 71.1,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "and I love the way it feels.",
+      "es": "y me encanta cómo se siente.",
+      "tag": "gravity"
+    },
+    {
+      "time": 74.7,
+      "section": "CHORUS",
+      "sectionStart": true,
+      "en": "Your gravity pulls me,",
+      "es": "Tu gravedad me atrae,",
+      "tag": "gravity"
+    },
+    {
+      "time": 76.22,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "your gravity calls,",
+      "es": "tu gravedad me llama,",
+      "tag": "gravity"
+    },
+    {
+      "time": 77.86,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "A force so strong",
+      "es": "una fuerza tan grande",
+      "tag": ""
+    },
+    {
+      "time": 79.51,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "I can't resist it at all.",
+      "es": "que no puedo resistir.",
+      "tag": ""
+    },
+    {
+      "time": 81.15,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "Your gravity pulls me,",
+      "es": "Tu gravedad me atrae,",
+      "tag": "gravity"
+    },
+    {
+      "time": 82.68,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "and I love the way I fall,",
+      "es": "y me encanta cómo caigo,",
+      "tag": "gravity"
+    },
+    {
+      "time": 84.51,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "'Cause ever since you found me",
+      "es": "porque desde que me encontraste",
+      "tag": ""
+    },
+    {
+      "time": 86.55,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "I don't wanna go back at all.",
+      "es": "ya no quiero volver atrás.",
+      "tag": ""
+    },
+    {
+      "time": 88.37,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "And from that collision",
+      "es": "Y de aquella colisión",
+      "tag": ""
+    },
+    {
+      "time": 90.18,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "whole new worlds were born.",
+      "es": "nacieron mundos enteros.",
+      "tag": "worlds-soft"
+    },
+    {
+      "time": 91.56,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "Oh-oh-oh…",
+      "es": "Oh-oh-oh…",
+      "tag": ""
+    },
+    {
+      "time": 92.95,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "And if whole worlds aren't enough,",
+      "es": "Y si mundos enteros no bastan,",
+      "tag": "worlds-soft"
+    },
+    {
+      "time": 94.33,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "we'll build new universes.",
+      "es": "construiremos universos.",
+      "tag": "worlds-soft"
+    },
+    {
+      "time": 96.21,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "Oh-oh-oh…",
+      "es": "Oh-oh-oh…",
+      "tag": ""
+    },
+    {
+      "time": 98.37,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "You and me…",
+      "es": "Tú y yo…",
+      "tag": ""
+    },
+    {
+      "time": 100.6,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "A singularity.",
+      "es": "Una singularidad.",
+      "tag": "singularity"
+    },
+    {
+      "time": 106.14,
+      "section": "VERSE 2",
+      "sectionStart": true,
+      "en": "And if words aren't enough",
+      "es": "Y si las palabras no alcanzan",
+      "tag": ""
+    },
+    {
+      "time": 111.69,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "to tell you what this is,",
+      "es": "para decirte qué es esto,",
+      "tag": ""
+    },
+    {
+      "time": 114.75,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "We'll invent new names",
+      "es": "inventaremos nuevos nombres",
+      "tag": ""
+    },
+    {
+      "time": 116.38,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "for every feeling we miss.",
+      "es": "para cada sentimiento que no podamos explicar.",
+      "tag": ""
+    },
+    {
+      "time": 118.02,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "Bridges between dimensions,",
+      "es": "Puentes entre dimensiones,",
+      "tag": ""
+    },
+    {
+      "time": 119.19,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "alternate realities,",
+      "es": "realidades alternativas,",
+      "tag": ""
+    },
+    {
+      "time": 120.36,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "Beautiful cities",
+      "es": "ciudades hermosas",
+      "tag": ""
+    },
+    {
+      "time": 121.53,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "that outlive you and me.",
+      "es": "que sobrevivan a ti y a mí.",
+      "tag": ""
+    },
+    {
+      "time": 124.59,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "We'll draw new constellations",
+      "es": "Dibujaremos nuevas constelaciones",
+      "tag": ""
+    },
+    {
+      "time": 126.27,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "no one has ever seen,",
+      "es": "que nadie haya visto jamás,",
+      "tag": ""
+    },
+    {
+      "time": 128.13,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "Give them secret names",
+      "es": "les daremos nombres secretos",
+      "tag": ""
+    },
+    {
+      "time": 130.35,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "and watch them come alive.",
+      "es": "y veremos cómo cobran vida.",
+      "tag": ""
+    },
+    {
+      "time": 131.4,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "Let's make another sky,",
+      "es": "Hagamos otro cielo,",
+      "tag": ""
+    },
+    {
+      "time": 132.69,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "another moon, another sea,",
+      "es": "otra luna, otro mar,",
+      "tag": ""
+    },
+    {
+      "time": 133.97999999999607,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "In our infinite universe",
+      "es": "en nuestro universo infinito",
+      "tag": ""
+    },
+    {
+      "time": 136.32,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "where you can always find me.",
+      "es": "donde siempre puedas encontrarme.",
+      "tag": ""
+    },
+    {
+      "time": 138.21,
+      "section": "PRE-CHORUS",
+      "sectionStart": true,
+      "en": "Maybe the universe",
+      "es": "Quizá el universo",
+      "tag": ""
+    },
+    {
+      "time": 139.86,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "was never really that wide,",
+      "es": "nunca fue realmente tan grande,",
+      "tag": ""
+    },
+    {
+      "time": 141.51,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "Maybe we just needed",
+      "es": "quizá sólo necesitábamos",
+      "tag": ""
+    },
+    {
+      "time": 143.16,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "a place where you and I collide.",
+      "es": "un lugar donde tú y yo colisionáramos.",
+      "tag": ""
+    },
+    {
+      "time": 144.39,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "Because whenever you're beside me",
+      "es": "Porque cada vez que estás junto a mí",
+      "tag": ""
+    },
+    {
+      "time": 146.1,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "everything begins again…",
+      "es": "todo vuelve a comenzar…",
+      "tag": ""
+    },
+    {
+      "time": 147.94,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "And even time",
+      "es": "Y hasta el tiempo",
+      "tag": ""
+    },
+    {
+      "time": 149.77,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "forgets where it should end.",
+      "es": "olvida dónde debería terminar.",
+      "tag": ""
+    },
+    {
+      "time": 153.6,
+      "section": "CHORUS",
+      "sectionStart": true,
+      "en": "Your gravity pulls me,",
+      "es": "Tu gravedad me atrae,",
+      "tag": "gravity"
+    },
+    {
+      "time": 154.83,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "your gravity calls,",
+      "es": "tu gravedad me llama,",
+      "tag": "gravity"
+    },
+    {
+      "time": 156.06,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "A force so strong",
+      "es": "una fuerza tan grande",
+      "tag": ""
+    },
+    {
+      "time": 158.64,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "I can't resist it at all.",
+      "es": "que no puedo resistir.",
+      "tag": ""
+    },
+    {
+      "time": 160.23,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "Your gravity pulls me,",
+      "es": "Tu gravedad me atrae,",
+      "tag": "gravity"
+    },
+    {
+      "time": 162.36,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "and I love the way I fall,",
+      "es": "y me encanta cómo caigo,",
+      "tag": "gravity"
+    },
+    {
+      "time": 163.59,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "'Cause ever since you found me",
+      "es": "porque desde que me encontraste",
+      "tag": ""
+    },
+    {
+      "time": 165.69,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "I don't wanna go back at all.",
+      "es": "ya no quiero volver atrás.",
+      "tag": ""
+    },
+    {
+      "time": 167.64,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "And from that collision",
+      "es": "Y de aquella colisión",
+      "tag": ""
+    },
+    {
+      "time": 168.74,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "whole new worlds were born.",
+      "es": "nacieron mundos enteros.",
+      "tag": "worlds-soft"
+    },
+    {
+      "time": 169.84,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "Oh-oh-oh…",
+      "es": "Oh-oh-oh…",
+      "tag": ""
+    },
+    {
+      "time": 170.94,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "And if whole worlds aren't enough,",
+      "es": "Y si mundos enteros no bastan,",
+      "tag": "worlds-soft"
+    },
+    {
+      "time": 172.83,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "we'll build new universes.",
+      "es": "construiremos universos.",
+      "tag": "worlds-soft"
+    },
+    {
+      "time": 175.34,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "Oh-oh-oh…",
+      "es": "Oh-oh-oh…",
+      "tag": ""
+    },
+    {
+      "time": 177.85,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "You and me…",
+      "es": "Tú y yo…",
+      "tag": ""
+    },
+    {
+      "time": 180.36,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "A singularity.",
+      "es": "Una singularidad.",
+      "tag": "singularity"
+    },
+    {
+      "time": 187.41,
+      "section": "BRIDGE",
+      "sectionStart": true,
+      "en": "Let me tell you",
+      "es": "Permíteme contarte",
+      "tag": ""
+    },
+    {
+      "time": 188.82,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "how time really works.",
+      "es": "cómo funciona realmente el tiempo.",
+      "tag": ""
+    },
+    {
+      "time": 190.23,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "Maybe I could stop it",
+      "es": "Quizá podría detenerlo",
+      "tag": ""
+    },
+    {
+      "time": 192.05,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "with a stolen kiss.",
+      "es": "con un beso robado.",
+      "tag": ""
+    },
+    {
+      "time": 193.86,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "And if it's different now,",
+      "es": "Y si ahora es diferente,",
+      "tag": ""
+    },
+    {
+      "time": 195.54,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "if time no longer matters,",
+      "es": "si el tiempo ya no importa,",
+      "tag": ""
+    },
+    {
+      "time": 197.37,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "Let the clocks keep running…",
+      "es": "dejemos que los relojes sigan corriendo…",
+      "tag": ""
+    },
+    {
+      "time": 200.49,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "We don't have to.",
+      "es": "Nosotros no tenemos que hacerlo.",
+      "tag": ""
+    },
+    {
+      "time": 201.38,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "Because here,",
+      "es": "Porque aquí,",
+      "tag": ""
+    },
+    {
+      "time": 202.26,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "inside this singularity,",
+      "es": "dentro de esta singularidad,",
+      "tag": "singularity"
+    },
+    {
+      "time": 203.82,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "Beyond space,",
+      "es": "más allá del espacio,",
+      "tag": ""
+    },
+    {
+      "time": 205.38,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "beyond gravity,",
+      "es": "más allá de la gravedad,",
+      "tag": ""
+    },
+    {
+      "time": 208.02,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "There is no before,",
+      "es": "no existe un antes,",
+      "tag": ""
+    },
+    {
+      "time": 209.52,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "there is no after,",
+      "es": "no existe un después,",
+      "tag": ""
+    },
+    {
+      "time": 210.75,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "There's only this moment…",
+      "es": "Sólo existe este momento…",
+      "tag": ""
+    },
+    {
+      "time": 213.26,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "and you, again.",
+      "es": "y tú, otra vez.",
+      "tag": "reveal"
+    },
+    {
+      "time": 215.77,
+      "section": "BUILD",
+      "sectionStart": true,
+      "en": "Ta-ra-ra…",
+      "es": "Ta-ra-ra…",
+      "tag": ""
+    },
+    {
+      "time": 218.27,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "Ta-ra-ra…",
+      "es": "Ta-ra-ra…",
+      "tag": ""
+    },
+    {
+      "time": 220.78,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "You imagine…",
+      "es": "Tú lo imaginas…",
+      "tag": "imagine"
+    },
+    {
+      "time": 223.29,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "I will build it.",
+      "es": "Yo lo construiré.",
+      "tag": "imagine"
+    },
+    {
+      "time": 224.24,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "Ta-ra-ra…",
+      "es": "Ta-ra-ra…",
+      "tag": ""
+    },
+    {
+      "time": 225.2,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "Ta-ra-ra…",
+      "es": "Ta-ra-ra…",
+      "tag": ""
+    },
+    {
+      "time": 226.15,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "You dream it…",
+      "es": "Tú lo sueñas…",
+      "tag": "imagine"
+    },
+    {
+      "time": 228.39,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "I'll find a way.",
+      "es": "Yo encontraré el camino.",
+      "tag": "imagine"
+    },
+    {
+      "time": 230.62,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "Oh-oh-oh…",
+      "es": "Oh-oh-oh…",
+      "tag": ""
+    },
+    {
+      "time": 232.86,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "And if the universe ends…",
+      "es": "Y si el universo termina…",
+      "tag": ""
+    },
+    {
+      "time": 234.7,
+      "section": "BUILD",
+      "sectionStart": false,
+      "en": "we'll make another.",
+      "es": "haremos otro.",
+      "tag": "worlds-soft"
+    },
+    {
+      "time": 236.53,
+      "section": "CLIMAX",
+      "sectionStart": true,
+      "en": "Another sky.",
+      "es": "Otro cielo.",
+      "tag": ""
+    },
+    {
+      "time": 238.37,
+      "section": "CLIMAX",
+      "sectionStart": false,
+      "en": "Oh-oh-oh…",
+      "es": "Oh-oh-oh…",
+      "tag": ""
+    },
+    {
+      "time": 240.21,
+      "section": "CLIMAX",
+      "sectionStart": false,
+      "en": "Another moon.",
+      "es": "Otra luna.",
+      "tag": ""
+    },
+    {
+      "time": 242.04,
+      "section": "CLIMAX",
+      "sectionStart": false,
+      "en": "Oh-oh-oh…",
+      "es": "Oh-oh-oh…",
+      "tag": ""
+    },
+    {
+      "time": 243.88,
+      "section": "CLIMAX",
+      "sectionStart": false,
+      "en": "Another sea.",
+      "es": "Otro mar.",
+      "tag": ""
+    },
+    {
+      "time": 245.72,
+      "section": "CLIMAX",
+      "sectionStart": false,
+      "en": "Oh-oh-oh…",
+      "es": "Oh-oh-oh…",
+      "tag": ""
+    },
+    {
+      "time": 247.55,
+      "section": "CLIMAX",
+      "sectionStart": false,
+      "en": "Another life.",
+      "es": "Otra vida.",
+      "tag": ""
+    },
+    {
+      "time": 249.39,
+      "section": "CLIMAX",
+      "sectionStart": false,
+      "en": "And if everything begins again…",
+      "es": "Y si todo vuelve a comenzar…",
+      "tag": ""
+    },
+    {
+      "time": 254.67,
+      "section": "CLIMAX",
+      "sectionStart": false,
+      "en": "Let it find us together.",
+      "es": "Que nos encuentre juntos.",
+      "tag": "reveal"
+    },
+    {
+      "time": 258.63,
+      "section": "FINAL CHORUS",
+      "sectionStart": true,
+      "en": "Your gravity pulls me,",
+      "es": "Tu gravedad me atrae,",
+      "tag": "gravity"
+    },
+    {
+      "time": 262.59,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "your gravity calls,",
+      "es": "tu gravedad me llama,",
+      "tag": "gravity"
+    },
+    {
+      "time": 266.55,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "A force so strong",
+      "es": "una fuerza tan grande",
+      "tag": ""
+    },
+    {
+      "time": 267.3,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "that turned two worlds into one.",
+      "es": "que convirtió dos mundos en uno.",
+      "tag": "worlds-soft"
+    },
+    {
+      "time": 269.34,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "Your gravity pulls me,",
+      "es": "Tu gravedad me atrae,",
+      "tag": "gravity"
+    },
+    {
+      "time": 271.38,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "and I love the way I fall,",
+      "es": "y me encanta cómo caigo,",
+      "tag": "gravity"
+    },
+    {
+      "time": 272.55,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "We crossed the horizon",
+      "es": "Cruzamos el horizonte",
+      "tag": ""
+    },
+    {
+      "time": 274.05,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "and there's no going back.",
+      "es": "y ya no hay vuelta atrás.",
+      "tag": ""
+    },
+    {
+      "time": 275.55,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "From that collision",
+      "es": "De aquella colisión",
+      "tag": ""
+    },
+    {
+      "time": 277.24,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "whole new worlds were born.",
+      "es": "nacieron mundos enteros.",
+      "tag": "worlds-soft"
+    },
+    {
+      "time": 278.94,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "Oh-oh-oh…",
+      "es": "Oh-oh-oh…",
+      "tag": ""
+    },
+    {
+      "time": 280.63,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "And if whole worlds aren't enough,",
+      "es": "Y si mundos enteros no bastan,",
+      "tag": "worlds-soft"
+    },
+    {
+      "time": 282.32,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "we'll build new universes.",
+      "es": "construiremos universos.",
+      "tag": "worlds-soft"
+    },
+    {
+      "time": 284.01,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "Oh-oh-oh…",
+      "es": "Oh-oh-oh…",
+      "tag": ""
+    },
+    {
+      "time": 285.71,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "And if words aren't enough,",
+      "es": "Y si las palabras no alcanzan,",
+      "tag": ""
+    },
+    {
+      "time": 287.4,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "we'll invent new feelings.",
+      "es": "inventaremos nuevos sentimientos.",
+      "tag": ""
+    },
+    {
+      "time": 288.91,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "Oh-oh-oh…",
+      "es": "Oh-oh-oh…",
+      "tag": ""
+    },
+    {
+      "time": 290.43,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "And if the universe is infinite,",
+      "es": "Y si el universo es infinito,",
+      "tag": ""
+    },
+    {
+      "time": 295.41,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "I wanna live it all with you.",
+      "es": "quiero vivirlo todo contigo.",
+      "tag": ""
+    },
+    {
+      "time": 300.39,
+      "section": "OUTRO",
+      "sectionStart": true,
+      "en": "Ta-ra-ra…",
+      "es": "Ta-ra-ra…",
+      "tag": ""
+    },
+    {
+      "time": 305.37,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "Ta-ra-ra…",
+      "es": "Ta-ra-ra…",
+      "tag": ""
+    },
+    {
+      "time": 310.35,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "The queen of my universe…",
+      "es": "La reina de mi universo…",
+      "tag": "queen"
+    },
+    {
+      "time": 313.53,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "Oh-oh-oh…",
+      "es": "Oh-oh-oh…",
+      "tag": ""
+    },
+    {
+      "time": 316.71,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "Let's make another sky,",
+      "es": "Hagamos otro cielo,",
+      "tag": ""
+    },
+    {
+      "time": 318.59,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "another moon, another sea.",
+      "es": "otra luna, otro mar.",
+      "tag": ""
+    },
+    {
+      "time": 320.47,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "Ta-ra-ra…",
+      "es": "Ta-ra-ra…",
+      "tag": ""
+    },
+    {
+      "time": 322.35,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "In our infinite universe…",
+      "es": "En nuestro universo infinito…",
+      "tag": ""
+    },
+    {
+      "time": 324.87,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "beyond space,",
+      "es": "más allá del espacio,",
+      "tag": ""
+    },
+    {
+      "time": 328.2,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "beyond time…",
+      "es": "más allá del tiempo…",
+      "tag": ""
+    },
+    {
+      "time": 331.53,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "Oh-oh-oh…",
+      "es": "Oh-oh-oh…",
+      "tag": ""
+    },
+    {
+      "time": 340.68,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "our singularity.",
+      "es": "nuestra singularidad.",
+      "tag": "singularity"
+    }
+  ]
+}
