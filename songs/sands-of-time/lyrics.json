@@ -1,0 +1,1385 @@
+{
+  "title": "Sands of Time",
+  "credit": "An original song",
+  "tagline": "God, what a lucky man I am.",
+  "duration": 454.92,
+  "timestampsAreEstimated": false,
+  "lines": [
+    {
+      "time": 3.4,
+      "section": "INTRO",
+      "sectionStart": true,
+      "en": "If we're only stardust...",
+      "es": "Si solo somos polvo de estrellas...",
+      "tag": "reveal"
+    },
+    {
+      "time": 7.44,
+      "section": "INTRO",
+      "sectionStart": false,
+      "en": "If we're just a grain of sand",
+      "es": "Si solo somos un grano de arena",
+      "tag": ""
+    },
+    {
+      "time": 11.56,
+      "section": "INTRO",
+      "sectionStart": false,
+      "en": "in the vastness of the universe...",
+      "es": "en la inmensidad del universo...",
+      "tag": ""
+    },
+    {
+      "time": 13.8,
+      "section": "INTRO",
+      "sectionStart": false,
+      "en": "If we're only a breath",
+      "es": "Si solo somos un suspiro",
+      "tag": ""
+    },
+    {
+      "time": 16.04,
+      "section": "INTRO",
+      "sectionStart": false,
+      "en": "inside the endlessness of time...",
+      "es": "en la inmensidad del tiempo...",
+      "tag": ""
+    },
+    {
+      "time": 21.12,
+      "section": "INTRO",
+      "sectionStart": false,
+      "en": "If we're just a fleeting spark",
+      "es": "Si somos solo un destello fugaz",
+      "tag": ""
+    },
+    {
+      "time": 25.6,
+      "section": "INTRO",
+      "sectionStart": false,
+      "en": "among the stars above...",
+      "es": "entre las estrellas del cielo...",
+      "tag": ""
+    },
+    {
+      "time": 29.52,
+      "section": "INTRO",
+      "sectionStart": false,
+      "en": "God, what a lucky man I am",
+      "es": "Dios, qué suerte tengo",
+      "tag": "reveal"
+    },
+    {
+      "time": 35.47,
+      "section": "INTRO",
+      "sectionStart": false,
+      "en": "to have found you.",
+      "es": "de haberte encontrado.",
+      "tag": "reveal"
+    },
+    {
+      "time": 41.41,
+      "section": "VERSE 1",
+      "sectionStart": true,
+      "en": "If we're only a grain of sand",
+      "es": "Si solo somos un grano de arena",
+      "tag": ""
+    },
+    {
+      "time": 47.36,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "in the vastness of the universe,",
+      "es": "en la inmensidad del universo,",
+      "tag": ""
+    },
+    {
+      "time": 50.12,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "if we're only a breath",
+      "es": "si solo somos un suspiro",
+      "tag": ""
+    },
+    {
+      "time": 52.88,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "inside the endlessness of time,",
+      "es": "en la inmensidad del tiempo,",
+      "tag": ""
+    },
+    {
+      "time": 55.64,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "if we're just a fleeting spark",
+      "es": "si somos solo un destello fugaz",
+      "tag": ""
+    },
+    {
+      "time": 57.36,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "among the stars above...",
+      "es": "entre las estrellas del cielo...",
+      "tag": ""
+    },
+    {
+      "time": 60.52,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "Out of millions of stars,",
+      "es": "Entre millones de estrellas,",
+      "tag": ""
+    },
+    {
+      "time": 63.72,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "somehow I was lucky enough to find you.",
+      "es": "tuve la suerte de encontrarte.",
+      "tag": ""
+    },
+    {
+      "time": 68.72,
+      "section": "VERSE 1",
+      "sectionStart": false,
+      "en": "God, what a lucky man I am.",
+      "es": "Dios, qué suerte tengo.",
+      "tag": "reveal"
+    },
+    {
+      "time": 71.92,
+      "section": "PRE-CHORUS",
+      "sectionStart": true,
+      "en": "If life is just a minute",
+      "es": "Si la vida es solo un minuto",
+      "tag": ""
+    },
+    {
+      "time": 72.88,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "on the clock of the sands of time,",
+      "es": "en el reloj de las arenas del tiempo,",
+      "tag": ""
+    },
+    {
+      "time": 74.26,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "if every second falls",
+      "es": "si cada segundo cae",
+      "tag": ""
+    },
+    {
+      "time": 75.64,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "and we can never make it stop...",
+      "es": "y nunca podemos detenerlo...",
+      "tag": ""
+    },
+    {
+      "time": 79.2,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "We can't stop time,",
+      "es": "No podemos detener el tiempo,",
+      "tag": ""
+    },
+    {
+      "time": 81.8,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "but we can choose to spend this night together.",
+      "es": "pero podemos decidir pasar juntos esta noche.",
+      "tag": ""
+    },
+    {
+      "time": 86.16,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "I wanna dance with you tonight,",
+      "es": "Quiero bailar contigo esta noche,",
+      "tag": ""
+    },
+    {
+      "time": 88.96,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "with the lights down low",
+      "es": "a poca luz",
+      "tag": ""
+    },
+    {
+      "time": 91.76,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "and the silence all around.",
+      "es": "y el silencio alrededor.",
+      "tag": ""
+    },
+    {
+      "time": 94.56,
+      "section": "CHORUS",
+      "sectionStart": true,
+      "en": "We didn't choose the place,",
+      "es": "No elegimos el lugar,",
+      "tag": ""
+    },
+    {
+      "time": 97.36,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "the music or the company.",
+      "es": "la música ni los asistentes.",
+      "tag": ""
+    },
+    {
+      "time": 100.32,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "We didn't choose when we arrived,",
+      "es": "No elegimos cuándo llegar,",
+      "tag": ""
+    },
+    {
+      "time": 104.99,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "or how long this dance would last.",
+      "es": "ni cuánto durará el baile.",
+      "tag": ""
+    },
+    {
+      "time": 109.65,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "But if we're here together tonight...",
+      "es": "Pero si estamos juntos esta noche...",
+      "tag": ""
+    },
+    {
+      "time": 114.32,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "Let's dance.",
+      "es": "Bailemos.",
+      "tag": "dance"
+    },
+    {
+      "time": 115.88,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "Ah-ah-ah...",
+      "es": "Ah-ah-ah...",
+      "tag": ""
+    },
+    {
+      "time": 117.44,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "If we're here, let's live it.",
+      "es": "Si estamos aquí, vivámoslo.",
+      "tag": ""
+    },
+    {
+      "time": 119.0,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "Ah-ah-ah...",
+      "es": "Ah-ah-ah...",
+      "tag": ""
+    },
+    {
+      "time": 120.56,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "If life is just a minute,",
+      "es": "Si la vida es solo un minuto,",
+      "tag": ""
+    },
+    {
+      "time": 123.12,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "I want every second of it with you.",
+      "es": "quiero todos sus segundos contigo.",
+      "tag": ""
+    },
+    {
+      "time": 128.24,
+      "section": "VERSE 2",
+      "sectionStart": true,
+      "en": "I don't know if the universe",
+      "es": "No sé si el universo",
+      "tag": ""
+    },
+    {
+      "time": 133.36,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "is writing out our story.",
+      "es": "está escribiendo nuestra historia.",
+      "tag": ""
+    },
+    {
+      "time": 134.36,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "I don't know what it has",
+      "es": "No sé qué tiene",
+      "tag": ""
+    },
+    {
+      "time": 135.38,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "in store for us.",
+      "es": "deparado para nosotros.",
+      "tag": ""
+    },
+    {
+      "time": 136.4,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "I don't know if it was destiny",
+      "es": "No sé si fue el destino",
+      "tag": ""
+    },
+    {
+      "time": 137.76,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "or just a beautiful coincidence",
+      "es": "o simplemente una hermosa coincidencia",
+      "tag": ""
+    },
+    {
+      "time": 139.48,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "that brought us face to face.",
+      "es": "la que nos puso frente a frente.",
+      "tag": ""
+    },
+    {
+      "time": 140.26,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "All I know",
+      "es": "Solo sé",
+      "tag": ""
+    },
+    {
+      "time": 141.04,
+      "section": "VERSE 2",
+      "sectionStart": false,
+      "en": "is we're building something together.",
+      "es": "que estamos construyendo algo juntos.",
+      "tag": ""
+    },
+    {
+      "time": 143.12,
+      "section": "PRE-CHORUS",
+      "sectionStart": true,
+      "en": "Let us be two",
+      "es": "Seamos dos",
+      "tag": ""
+    },
+    {
+      "time": 145.2,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "with a choice we make together,",
+      "es": "con una elección compartida,",
+      "tag": ""
+    },
+    {
+      "time": 149.64,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "walking side by side",
+      "es": "caminando juntos",
+      "tag": ""
+    },
+    {
+      "time": 151.48,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "through the passing days.",
+      "es": "por el pasar de los días.",
+      "tag": ""
+    },
+    {
+      "time": 153.32,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "I wanna discover every corner",
+      "es": "Quiero descubrir cada rincón",
+      "tag": ""
+    },
+    {
+      "time": 155.58,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "of your universe.",
+      "es": "de tu universo.",
+      "tag": ""
+    },
+    {
+      "time": 157.84,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "If we're made of stardust,",
+      "es": "Si somos polvo de estrellas,",
+      "tag": ""
+    },
+    {
+      "time": 160.88,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "let me discover in you",
+      "es": "déjame descubrir en ti",
+      "tag": ""
+    },
+    {
+      "time": 163.25,
+      "section": "PRE-CHORUS",
+      "sectionStart": false,
+      "en": "how long eternity can last.",
+      "es": "cuánto puede durar la eternidad.",
+      "tag": ""
+    },
+    {
+      "time": 165.63,
+      "section": "CHORUS",
+      "sectionStart": true,
+      "en": "We didn't choose the place,",
+      "es": "No elegimos el lugar,",
+      "tag": ""
+    },
+    {
+      "time": 168.0,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "the music or the company.",
+      "es": "la música ni los asistentes.",
+      "tag": ""
+    },
+    {
+      "time": 169.38,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "We didn't choose when we arrived,",
+      "es": "No elegimos cuándo llegar,",
+      "tag": ""
+    },
+    {
+      "time": 170.76,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "or how long this dance would last.",
+      "es": "ni cuánto durará el baile.",
+      "tag": ""
+    },
+    {
+      "time": 177.38,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "But if we're here together tonight...",
+      "es": "Pero si estamos juntos esta noche...",
+      "tag": ""
+    },
+    {
+      "time": 184.0,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "Let's dance.",
+      "es": "Bailemos.",
+      "tag": "dance"
+    },
+    {
+      "time": 185.36,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "Ah-ah-ah...",
+      "es": "Ah-ah-ah...",
+      "tag": ""
+    },
+    {
+      "time": 186.72,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "If we're here, let's live it.",
+      "es": "Si estamos aquí, vivámoslo.",
+      "tag": ""
+    },
+    {
+      "time": 188.08,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "Ah-ah-ah...",
+      "es": "Ah-ah-ah...",
+      "tag": ""
+    },
+    {
+      "time": 189.44,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "If life is just a minute,",
+      "es": "Si la vida es solo un minuto,",
+      "tag": ""
+    },
+    {
+      "time": 195.08,
+      "section": "CHORUS",
+      "sectionStart": false,
+      "en": "I want every second of it with you.",
+      "es": "quiero todos sus segundos contigo.",
+      "tag": ""
+    },
+    {
+      "time": 198.92,
+      "section": "VERSE 3",
+      "sectionStart": true,
+      "en": "I want you for this lifetime",
+      "es": "Te quiero para esta vida",
+      "tag": ""
+    },
+    {
+      "time": 204.24,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "and for eternity.",
+      "es": "y para la eternidad.",
+      "tag": ""
+    },
+    {
+      "time": 207.24,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "I want to stay inside your heart,",
+      "es": "Quiero quedarme en ti,",
+      "tag": ""
+    },
+    {
+      "time": 209.34,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "every single day.",
+      "es": "cada día.",
+      "tag": ""
+    },
+    {
+      "time": 211.44,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "I wanna write our story in the stars,",
+      "es": "Quiero escribir nuestra historia en las estrellas,",
+      "tag": ""
+    },
+    {
+      "time": 212.7,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "look up at the sky",
+      "es": "mirar al cielo",
+      "tag": ""
+    },
+    {
+      "time": 213.96,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "and see it shining there.",
+      "es": "y verla brillar ahí.",
+      "tag": ""
+    },
+    {
+      "time": 219.64,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "Maybe eternity doesn't mean forever,",
+      "es": "Quizá la eternidad no significa para siempre,",
+      "tag": ""
+    },
+    {
+      "time": 222.24,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "but one moment with you",
+      "es": "pero un momento contigo",
+      "tag": ""
+    },
+    {
+      "time": 224.12,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "can make forever feel real.",
+      "es": "puede hacer que el para siempre se sienta real.",
+      "tag": ""
+    },
+    {
+      "time": 226.0,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "And in the middle of all this chaos,",
+      "es": "Y en medio de todo este caos,",
+      "tag": ""
+    },
+    {
+      "time": 229.32,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "I wanna hold your hand.",
+      "es": "quiero tomar tu mano.",
+      "tag": ""
+    },
+    {
+      "time": 231.12,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "Even if the whole world changes,",
+      "es": "Aunque el mundo entero cambie,",
+      "tag": ""
+    },
+    {
+      "time": 233.57,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "even if time keeps falling...",
+      "es": "aunque el tiempo siga cayendo...",
+      "tag": ""
+    },
+    {
+      "time": 236.02,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "You're the place",
+      "es": "Tú eres el lugar",
+      "tag": "reveal"
+    },
+    {
+      "time": 238.47,
+      "section": "VERSE 3",
+      "sectionStart": false,
+      "en": "where I want every day to end.",
+      "es": "donde quiero que termine cada día.",
+      "tag": "reveal"
+    },
+    {
+      "time": 240.92,
+      "section": "BRIDGE",
+      "sectionStart": true,
+      "en": "Let's expand our universe.",
+      "es": "Expandamos nuestro universo.",
+      "tag": ""
+    },
+    {
+      "time": 244.92,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "I've got so many dimensions",
+      "es": "Tengo tantas dimensiones",
+      "tag": ""
+    },
+    {
+      "time": 246.37,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "I wanna show you,",
+      "es": "que quiero mostrarte,",
+      "tag": ""
+    },
+    {
+      "time": 247.83,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "and so many emotions",
+      "es": "y tantas emociones",
+      "tag": ""
+    },
+    {
+      "time": 249.28,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "that you awakened in me.",
+      "es": "que despertaste en mí.",
+      "tag": ""
+    },
+    {
+      "time": 254.88,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "Let's go to the moon",
+      "es": "Vamos a la luna",
+      "tag": ""
+    },
+    {
+      "time": 256.23,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "and sit here together.",
+      "es": "y sentémonos juntos.",
+      "tag": ""
+    },
+    {
+      "time": 257.57,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "Let's invent",
+      "es": "Inventemos",
+      "tag": ""
+    },
+    {
+      "time": 258.92,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "something no one's ever known.",
+      "es": "algo que nadie haya conocido jamás.",
+      "tag": ""
+    },
+    {
+      "time": 263.16,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "The universe seemed so vast,",
+      "es": "El universo parecía tan inmenso,",
+      "tag": ""
+    },
+    {
+      "time": 265.86,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "but tonight it fits entirely",
+      "es": "pero esta noche cabe entero",
+      "tag": ""
+    },
+    {
+      "time": 268.56,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "between your hands.",
+      "es": "entre tus manos.",
+      "tag": ""
+    },
+    {
+      "time": 271.26,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "I wanna kiss the stars upon your skin,",
+      "es": "Quiero besar las estrellas sobre tu piel,",
+      "tag": ""
+    },
+    {
+      "time": 273.96,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "travel through your constellations.",
+      "es": "viajar por tus constelaciones.",
+      "tag": ""
+    },
+    {
+      "time": 276.66,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "Let me make you feel",
+      "es": "Déjame hacerte sentir",
+      "tag": ""
+    },
+    {
+      "time": 279.36,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "like you belong among them.",
+      "es": "que perteneces entre ellas.",
+      "tag": ""
+    },
+    {
+      "time": 283.8,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "Let me build for you",
+      "es": "Déjame construirte",
+      "tag": ""
+    },
+    {
+      "time": 285.96,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "a corridor of stars.",
+      "es": "un pasillo de estrellas.",
+      "tag": ""
+    },
+    {
+      "time": 288.12,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "And if you want to admire it,",
+      "es": "Y si quieres admirarlo,",
+      "tag": ""
+    },
+    {
+      "time": 291.52,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "I'll build you a brand-new moon.",
+      "es": "te construiré una luna nueva.",
+      "tag": ""
+    },
+    {
+      "time": 294.33,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "Let's walk together",
+      "es": "Caminemos juntos",
+      "tag": ""
+    },
+    {
+      "time": 297.15,
+      "section": "BRIDGE",
+      "sectionStart": false,
+      "en": "through planets and comets.",
+      "es": "entre planetas y cometas.",
+      "tag": ""
+    },
+    {
+      "time": 299.96,
+      "section": "BRIDGE 2",
+      "sectionStart": true,
+      "en": "If you show me your darkness,",
+      "es": "Si me muestras tu oscuridad,",
+      "tag": ""
+    },
+    {
+      "time": 302.29,
+      "section": "BRIDGE 2",
+      "sectionStart": false,
+      "en": "I'll learn to recognize your stars.",
+      "es": "aprenderé a reconocer tus estrellas.",
+      "tag": ""
+    },
+    {
+      "time": 304.61,
+      "section": "BRIDGE 2",
+      "sectionStart": false,
+      "en": "I wanna know your light,",
+      "es": "Quiero conocer tu luz,",
+      "tag": ""
+    },
+    {
+      "time": 306.94,
+      "section": "BRIDGE 2",
+      "sectionStart": false,
+      "en": "your shadows,",
+      "es": "tus sombras,",
+      "tag": ""
+    },
+    {
+      "time": 309.27,
+      "section": "BRIDGE 2",
+      "sectionStart": false,
+      "en": "your storms",
+      "es": "tus tormentas",
+      "tag": ""
+    },
+    {
+      "time": 311.59,
+      "section": "BRIDGE 2",
+      "sectionStart": false,
+      "en": "and your galaxies.",
+      "es": "y tus galaxias.",
+      "tag": ""
+    },
+    {
+      "time": 313.92,
+      "section": "BRIDGE 2",
+      "sectionStart": false,
+      "en": "I wanna discover every corner",
+      "es": "Quiero descubrir cada rincón",
+      "tag": ""
+    },
+    {
+      "time": 316.56,
+      "section": "BRIDGE 2",
+      "sectionStart": false,
+      "en": "of your universe.",
+      "es": "de tu universo.",
+      "tag": ""
+    },
+    {
+      "time": 319.2,
+      "section": "BRIDGE 2",
+      "sectionStart": false,
+      "en": "Because even in your darkest night,",
+      "es": "Porque incluso en tu noche más oscura,",
+      "tag": ""
+    },
+    {
+      "time": 321.4,
+      "section": "BRIDGE 2",
+      "sectionStart": false,
+      "en": "I'll learn how to find you.",
+      "es": "aprenderé a encontrarte.",
+      "tag": "reveal"
+    },
+    {
+      "time": 326.12,
+      "section": "BREAKDOWN",
+      "sectionStart": true,
+      "en": "I wanna close my eyes",
+      "es": "Quiero cerrar los ojos",
+      "tag": ""
+    },
+    {
+      "time": 330.0,
+      "section": "BREAKDOWN",
+      "sectionStart": false,
+      "en": "and feel your lips against mine.",
+      "es": "y sentir tus labios sobre los míos.",
+      "tag": ""
+    },
+    {
+      "time": 335.0,
+      "section": "BREAKDOWN",
+      "sectionStart": false,
+      "en": "Give me the eternity of your kisses.",
+      "es": "Dame la eternidad de tus besos.",
+      "tag": "reveal"
+    },
+    {
+      "time": 339.52,
+      "section": "BREAKDOWN",
+      "sectionStart": false,
+      "en": "Every hidden corner...",
+      "es": "Cada rincón escondido...",
+      "tag": ""
+    },
+    {
+      "time": 344.04,
+      "section": "BREAKDOWN",
+      "sectionStart": false,
+      "en": "I wanna discover them all.",
+      "es": "Quiero descubrirlos todos.",
+      "tag": ""
+    },
+    {
+      "time": 348.36,
+      "section": "BREAKDOWN",
+      "sectionStart": false,
+      "en": "Without thinking about time.",
+      "es": "Sin pensar en el tiempo.",
+      "tag": ""
+    },
+    {
+      "time": 352.92,
+      "section": "BREAKDOWN",
+      "sectionStart": false,
+      "en": "Without thinking about tomorrow.",
+      "es": "Sin pensar en el mañana.",
+      "tag": ""
+    },
+    {
+      "time": 356.8,
+      "section": "BREAKDOWN",
+      "sectionStart": false,
+      "en": "Just you and me.",
+      "es": "Solo tú y yo.",
+      "tag": ""
+    },
+    {
+      "time": 358.76,
+      "section": "BREAKDOWN",
+      "sectionStart": false,
+      "en": "Here.",
+      "es": "Aquí.",
+      "tag": ""
+    },
+    {
+      "time": 360.72,
+      "section": "BREAKDOWN",
+      "sectionStart": false,
+      "en": "Now.",
+      "es": "Ahora.",
+      "tag": ""
+    },
+    {
+      "time": 362.68,
+      "section": "BREAKDOWN",
+      "sectionStart": false,
+      "en": "Maybe eternity doesn't mean forever,",
+      "es": "Quizá la eternidad no significa para siempre,",
+      "tag": ""
+    },
+    {
+      "time": 365.19,
+      "section": "BREAKDOWN",
+      "sectionStart": false,
+      "en": "but one moment with you",
+      "es": "pero un momento contigo",
+      "tag": ""
+    },
+    {
+      "time": 367.7,
+      "section": "BREAKDOWN",
+      "sectionStart": false,
+      "en": "can make forever feel real.",
+      "es": "puede hacer que el para siempre se sienta real.",
+      "tag": ""
+    },
+    {
+      "time": 370.21,
+      "section": "GRAND BRIDGE",
+      "sectionStart": true,
+      "en": "If we're made of stardust,",
+      "es": "Si somos polvo de estrellas,",
+      "tag": ""
+    },
+    {
+      "time": 372.72,
+      "section": "GRAND BRIDGE",
+      "sectionStart": false,
+      "en": "let me discover in you",
+      "es": "déjame descubrir en ti",
+      "tag": ""
+    },
+    {
+      "time": 375.66,
+      "section": "GRAND BRIDGE",
+      "sectionStart": false,
+      "en": "how long eternity can last.",
+      "es": "cuánto puede durar la eternidad.",
+      "tag": ""
+    },
+    {
+      "time": 378.59,
+      "section": "GRAND BRIDGE",
+      "sectionStart": false,
+      "en": "I wanna know",
+      "es": "Quiero saber",
+      "tag": ""
+    },
+    {
+      "time": 381.53,
+      "section": "GRAND BRIDGE",
+      "sectionStart": false,
+      "en": "what it feels like when the universe explodes into light.",
+      "es": "qué se siente cuando el universo estalla en luz.",
+      "tag": ""
+    },
+    {
+      "time": 384.46,
+      "section": "GRAND BRIDGE",
+      "sectionStart": false,
+      "en": "And if someday",
+      "es": "Y si algún día",
+      "tag": ""
+    },
+    {
+      "time": 387.4,
+      "section": "GRAND BRIDGE",
+      "sectionStart": false,
+      "en": "we reach the edge of the universe,",
+      "es": "llegamos al borde del universo,",
+      "tag": ""
+    },
+    {
+      "time": 394.68,
+      "section": "GRAND BRIDGE",
+      "sectionStart": false,
+      "en": "I wanna know the end of it",
+      "es": "quiero conocer su final",
+      "tag": ""
+    },
+    {
+      "time": 398.52,
+      "section": "GRAND BRIDGE",
+      "sectionStart": false,
+      "en": "with you by my side.",
+      "es": "contigo a mi lado.",
+      "tag": ""
+    },
+    {
+      "time": 402.36,
+      "section": "GRAND BRIDGE",
+      "sectionStart": false,
+      "en": "Because I don't wanna stop time.",
+      "es": "Porque no quiero detener el tiempo.",
+      "tag": ""
+    },
+    {
+      "time": 405.08,
+      "section": "GRAND BRIDGE",
+      "sectionStart": false,
+      "en": "I don't wanna ask it",
+      "es": "No quiero pedirle",
+      "tag": ""
+    },
+    {
+      "time": 407.8,
+      "section": "GRAND BRIDGE",
+      "sectionStart": false,
+      "en": "to stand still.",
+      "es": "que se detenga.",
+      "tag": ""
+    },
+    {
+      "time": 410.52,
+      "section": "GRAND BRIDGE",
+      "sectionStart": false,
+      "en": "I wanna live it.",
+      "es": "Quiero vivirlo.",
+      "tag": "reveal"
+    },
+    {
+      "time": 411.28,
+      "section": "GRAND BRIDGE",
+      "sectionStart": false,
+      "en": "I wanna live it with you.",
+      "es": "Quiero vivirlo contigo.",
+      "tag": "reveal"
+    },
+    {
+      "time": 414.09,
+      "section": "FINAL CHORUS",
+      "sectionStart": true,
+      "en": "We didn't choose the place,",
+      "es": "No elegimos el lugar,",
+      "tag": ""
+    },
+    {
+      "time": 416.91,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "the music or the company.",
+      "es": "la música ni los asistentes.",
+      "tag": ""
+    },
+    {
+      "time": 419.72,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "We didn't choose when we arrived,",
+      "es": "No elegimos cuándo llegar,",
+      "tag": ""
+    },
+    {
+      "time": 422.53,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "or how long this dance would last.",
+      "es": "ni cuánto durará el baile.",
+      "tag": ""
+    },
+    {
+      "time": 425.35,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "But if we're here together tonight...",
+      "es": "Pero si estamos juntos esta noche...",
+      "tag": ""
+    },
+    {
+      "time": 428.16,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "LET'S DANCE.",
+      "es": "¡BAILEMOS!",
+      "tag": "dance"
+    },
+    {
+      "time": 431.16,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "Ah-ah-ah...",
+      "es": "Ah-ah-ah...",
+      "tag": ""
+    },
+    {
+      "time": 434.16,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "If we're here, let's live it.",
+      "es": "Si estamos aquí, vivámoslo.",
+      "tag": ""
+    },
+    {
+      "time": 435.6,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "Ah-ah-ah...",
+      "es": "Ah-ah-ah...",
+      "tag": ""
+    },
+    {
+      "time": 437.04,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "If life is just a minute,",
+      "es": "Si la vida es solo un minuto,",
+      "tag": ""
+    },
+    {
+      "time": 438.48,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "I want every second of it with you.",
+      "es": "quiero todos sus segundos contigo.",
+      "tag": ""
+    },
+    {
+      "time": 439.92,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "on the clock of the sands of time,",
+      "es": "en el reloj de las arenas del tiempo,",
+      "tag": ""
+    },
+    {
+      "time": 440.6,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "And if we're just a fleeting spark",
+      "es": "Y si somos solo un destello fugaz",
+      "tag": ""
+    },
+    {
+      "time": 441.29,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "among the stars above...",
+      "es": "entre las estrellas del cielo...",
+      "tag": ""
+    },
+    {
+      "time": 441.97,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "Out of millions of stars,",
+      "es": "Entre millones de estrellas,",
+      "tag": ""
+    },
+    {
+      "time": 442.66,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "somehow I was lucky enough to find you.",
+      "es": "tuve la suerte de encontrarte.",
+      "tag": ""
+    },
+    {
+      "time": 443.34,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "Ah-ah-ah...",
+      "es": "Ah-ah-ah...",
+      "tag": ""
+    },
+    {
+      "time": 444.03,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "Sands of time.",
+      "es": "Arenas del tiempo.",
+      "tag": "sands"
+    },
+    {
+      "time": 444.71,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "Ah-ah-ah...",
+      "es": "Ah-ah-ah...",
+      "tag": ""
+    },
+    {
+      "time": 445.39,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "As they fall,",
+      "es": "Mientras caen,",
+      "tag": ""
+    },
+    {
+      "time": 446.08,
+      "section": "FINAL CHORUS",
+      "sectionStart": false,
+      "en": "I'm still here with you.",
+      "es": "sigo aquí contigo.",
+      "tag": "reveal"
+    },
+    {
+      "time": 446.76,
+      "section": "OUTRO",
+      "sectionStart": true,
+      "en": "If we're only a grain of sand...",
+      "es": "Si solo somos un grano de arena...",
+      "tag": ""
+    },
+    {
+      "time": 447.45,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "God, what a lucky man I am.",
+      "es": "Dios, qué suerte tengo.",
+      "tag": "reveal"
+    },
+    {
+      "time": 448.13,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "If we're only a breath...",
+      "es": "Si solo somos un suspiro...",
+      "tag": ""
+    },
+    {
+      "time": 448.81,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "God, what a lucky man I am.",
+      "es": "Dios, qué suerte tengo.",
+      "tag": "reveal"
+    },
+    {
+      "time": 449.5,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "If we're only a fleeting spark...",
+      "es": "Si solo somos un destello fugaz...",
+      "tag": ""
+    },
+    {
+      "time": 450.18,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "How lucky I am",
+      "es": "Qué suerte tengo",
+      "tag": "reveal"
+    },
+    {
+      "time": 450.87,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "to have found you in this lifetime.",
+      "es": "de haberte encontrado en esta vida.",
+      "tag": "reveal"
+    },
+    {
+      "time": 451.55,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "You're the place",
+      "es": "Tú eres el lugar",
+      "tag": ""
+    },
+    {
+      "time": 452.24,
+      "section": "OUTRO",
+      "sectionStart": false,
+      "en": "where I want every day to end.",
+      "es": "donde quiero que termine cada día.",
+      "tag": "reveal"
+    }
+  ]
+}

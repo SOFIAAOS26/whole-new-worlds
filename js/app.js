@@ -13,7 +13,7 @@
 
   // sections that should make the universe swell a little
   const HOT_SECTIONS = new Set(["CHORUS", "FINAL CHORUS", "CLIMAX", "BUILD"]);
-  const HUM = /^\s*(ta-ra|oh-oh|ooh|da-da|na-na)/i;
+  const HUM = /^\s*(ta-ra|oh-oh|ah-ah|ooh|da-da|na-na)/i;
 
   const els = {
     body:        document.body,

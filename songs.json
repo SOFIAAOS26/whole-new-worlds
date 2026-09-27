@@ -34,12 +34,18 @@
       "status": "ready"
     },
     {
-      "id": "world-3",
-      "title": "Nuevo mundo",
-      "hue": 38,
+      "id": "sands-of-time",
+      "title": "Sands of Time",
+      "credit": "An original song",
+      "tagline": "God, what a lucky man I am.",
+      "audio": "songs/sands-of-time/audio.mp3",
+      "cover": "songs/sands-of-time/cover.jpg",
+      "lyrics": "songs/sands-of-time/lyrics.json",
+      "hue": 40,
       "kind": "planet",
-      "galaxy": { "x": 0.78, "y": 0.64, "size": 0.86 },
-      "status": "coming"
+      "skies": [],
+      "galaxy": { "x": 0.78, "y": 0.64, "size": 0.92 },
+      "status": "ready"
     },
     {
       "id": "world-4",

@@ -1260,3 +1260,15 @@ body[data-galaxy="true"] .intro { opacity: 0; pointer-events: none; transition: 
 .lyric.tag-queen.is-active .en { color: #f6efe2; text-shadow: 0 0 26px rgba(217, 184, 119, 0.5); }
 
 @media (prefers-reduced-motion: reduce) { .nedi { animation: none; } }
+
+/* Sands of Time line tags — "Let's dance" and the "Sands of time" motif */
+.lyric.tag-dance .en { font-family: var(--font-display); letter-spacing: 0.02em; }
+.lyric.tag-dance.is-active .en {
+  background: linear-gradient(90deg, #fff2df, hsl(var(--wh, 40) 85% 78%) 52%, var(--gold));
+  -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none;
+}
+.lyric.tag-sands .en { font-family: var(--font-display); font-style: italic; letter-spacing: 0.06em; }
+.lyric.tag-sands.is-active .en {
+  background: linear-gradient(90deg, #f6ead0, var(--gold) 55%, hsl(var(--wh, 40) 70% 60%));
+  -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none;
+}
